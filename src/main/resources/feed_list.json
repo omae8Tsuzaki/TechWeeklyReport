@@ -1,0 +1,26 @@
+[
+  {
+    "name": "The Register",
+    "url": "https://www.theregister.com/headlines.atom"
+  },
+  {
+    "name": "Hacker News",
+    "url": "https://hnrss.org/frontpage"
+  },
+  {
+    "name": "TechCrunch Japan",
+    "url": "https://jp.techcrunch.com/feed/"
+  },
+  {
+    "name": "Zenn (トレンド記事)",
+    "url": "https://zenn.dev/topics/tech/feed"
+  },
+  {
+    "name": "Publickey",
+    "url": "https://www.publickey1.jp/atom.xml"
+  },
+  {
+    "name": "InfoQ (日本語)",
+    "url": "https://www.infoq.com/jp/feed/news/"
+  }
+]
