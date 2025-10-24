@@ -9,6 +9,9 @@ on:
   # 手動実行を可能にするトリガー
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 # 2. 実行するジョブを定義
 jobs:
   generate_report:
