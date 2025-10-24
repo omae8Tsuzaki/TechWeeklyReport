@@ -13,6 +13,7 @@ repositories {
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter")
+    implementation("org.springframework.boot:spring-boot-starter-json")
     implementation("com.fasterxml.jackson.core:jackson-databind:2.20.0")
     implementation("com.rometools:rome:2.1.0")
     annotationProcessor ("org.springframework.boot:spring-boot-configuration-processor")

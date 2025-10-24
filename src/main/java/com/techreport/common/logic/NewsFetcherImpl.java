@@ -7,6 +7,7 @@ import com.rometools.rome.feed.synd.SyndFeed;
 import com.rometools.rome.io.SyndFeedInput;
 import com.techreport.common.AppConfig;
 import com.techreport.common.model.Article;
+import org.springframework.stereotype.Service;
 
 import java.io.File;
 import java.io.IOException;
@@ -19,6 +20,7 @@ import java.time.*;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
 
+@Service
 public class NewsFetcherImpl implements NewsFetcher {
 
     private final AppConfig appConfig;
