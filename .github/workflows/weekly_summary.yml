@@ -57,4 +57,4 @@ jobs:
           # reports/ ディレクトリ以下のMarkdownファイルのみをコミット対象とする
           file_pattern: 'reports/**/*.md'
           # Git Auto CommitがプッシュできるようにGitHub Tokenを使用
-          token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
