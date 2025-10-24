@@ -27,7 +27,7 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '21'
-          cache: 'maven'
+          cache: 'gradle'
 
       - name: Build and Package Application
         # Mavenでプロジェクトをコンパイルし、テストをスキップして実行可能なJARを生成
