@@ -22,16 +22,19 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set up Java 21 and Maven
+      - name: Set up Java 21 and Gradle
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '21'
           cache: 'gradle'
 
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
       - name: Build and Package Application
         # Mavenでプロジェクトをコンパイルし、テストをスキップして実行可能なJARを生成
-        run: mvn package -DskipTests
+        run: ./gradlew bootJar -x test
 
       - name: Run News Pipeline Application
         # 生成されたJARファイルを実行
