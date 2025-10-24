@@ -1,0 +1,54 @@
+name: Weekly Tech News Generator (Java/Spring)
+
+# 1. ワークフロー実行のトリガーを定義
+on:
+  # 毎週日曜日の日本時間22時 (UTC 13:00) に自動実行
+  # Cron形式: 分 時 日 月 曜日 (0=日)
+  schedule:
+    - cron: '0 13 * * 0'
+  # 手動実行を可能にするトリガー
+  workflow_dispatch:
+
+# 2. 実行するジョブを定義
+jobs:
+  generate_report:
+    runs-on: ubuntu-latest
+
+    # 記事収集・要約・レポート生成を実行
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        # Git Auto Commitアクションで使うため、フルヒストリーを取得
+        with:
+          fetch-depth: 0
+
+      - name: Set up Java 21 and Maven
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+          cache: 'maven'
+
+      - name: Build and Package Application
+        # Mavenでプロジェクトをコンパイルし、テストをスキップして実行可能なJARを生成
+        run: mvn package -DskipTests
+
+      - name: Run News Pipeline Application
+        # 生成されたJARファイルを実行
+        # ${OPENAI_API_KEY} は、GitHub Secretsから自動的に環境変数として渡されます
+        run: java -jar target/*.jar
+        # 環境変数を設定 (Spring Bootが自動的に読み込む)
+        env:
+          # GitHub Secretsで設定したキー名と一致させる
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          # Spring Bootの起動時に、この環境変数がapplication.propertiesの openai.api-key に注入される
+
+      - name: Commit and Push new Markdown Reports
+        # レポートが保存されたディレクトリのみをコミット対象とする
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto: Generated weekly tech report"
+          # reports/ ディレクトリ以下のMarkdownファイルのみをコミット対象とする
+          file_pattern: 'reports/**/*.md'
+          # Git Auto CommitがプッシュできるようにGitHub Tokenを使用
+          token: ${{ secrets.GITHUB_TOKEN }}
