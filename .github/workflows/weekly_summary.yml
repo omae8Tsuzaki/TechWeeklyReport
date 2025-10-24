@@ -39,7 +39,7 @@ jobs:
       - name: Run News Pipeline Application
         # 生成されたJARファイルを実行
         # ${OPENAI_API_KEY} は、GitHub Secretsから自動的に環境変数として渡されます
-        run: java -jar target/*.jar
+        run: java -jar build/libs/*.jar
         # 環境変数を設定 (Spring Bootが自動的に読み込む)
         env:
           # GitHub Secretsで設定したキー名と一致させる
