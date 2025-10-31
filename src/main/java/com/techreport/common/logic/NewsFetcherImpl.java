@@ -7,6 +7,8 @@ import com.rometools.rome.feed.synd.SyndFeed;
 import com.rometools.rome.io.SyndFeedInput;
 import com.techreport.common.AppConfig;
 import com.techreport.common.model.Article;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
@@ -23,13 +25,21 @@ import java.util.*;
 @Service
 public class NewsFetcherImpl implements NewsFetcher {
 
+    // ログ出力の設定
+    private static final Logger LOGGER = LoggerFactory.getLogger(NewsFetcherImpl.class);
+    // アプリケーション設定
     private final AppConfig appConfig;
     // JSON処理用
     private final ObjectMapper objectMapper;
-
+    // HTTPクライアント
     private final HttpClient httpClient;
 
-
+    /**
+     * <p>コンストラクタ。</p>
+     *
+     * @param appConfig アプリケーション設定
+     * @param objectMapper JSON処理用オブジェクトマッパー
+     */
     public NewsFetcherImpl(AppConfig appConfig, ObjectMapper objectMapper) {
         this.appConfig = appConfig;
         this.objectMapper = objectMapper;
@@ -48,7 +58,7 @@ public class NewsFetcherImpl implements NewsFetcher {
             // クラスパス（GitHub Actions実行環境）またはファイルシステムからロード
             return objectMapper.readValue(new File(filePath), new TypeReference<>() {});
         } catch (IOException e) {
-            System.err.println("Error loading feed list from " + filePath + ": " + e.getMessage());
+            LOGGER.error("Error loading feed list from {}: {}", filePath, e.getMessage());
             return Collections.emptyList();
         }
     }
@@ -69,7 +79,7 @@ public class NewsFetcherImpl implements NewsFetcher {
         Set<Article> allArticles = new HashSet<>();
         SyndFeedInput input = new SyndFeedInput();
 
-        System.out.println("Fetching articles from " + oneWeekAgo + "...");
+        LOGGER.info("Fetching articles from {}...", oneWeekAgo);
 
         for (Map<String, String> feedInfo : feedList) {
             String feedUrl = feedInfo.get("url");

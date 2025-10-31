@@ -20,15 +20,18 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * <p>Markdown生成用ロジックの実装クラス。</p>
+ */
 @Service
 public class MarkdownGeneratorImpl implements MarkdownGenerator {
 
     @Autowired
-    AppConfig config;
+    private AppConfig config;
     private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd");
     private static final DateTimeFormatter DATETIME_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
 
-    Logger logger = Logger.getLogger(MarkdownGeneratorImpl.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(MarkdownGeneratorImpl.class.getName());
 
     // コンストラクタ（Springインジェクションを想定）
     public MarkdownGeneratorImpl() {
@@ -57,15 +60,17 @@ public class MarkdownGeneratorImpl implements MarkdownGenerator {
             // ファイルに書き込み (UTF-8)
             Files.writeString(output.toPath(), markdownContent);
 
-            logger.log(Level.INFO, "ファイルの書き込み成功");
+            LOGGER.log(Level.INFO, "ファイルの書き込み成功");
         } catch (IOException e) {
-            throw new LogicException("", e);
+            throw new LogicException("Failed to save markdown", e);
         }
     }
 
     /**
      * <p>生成された　Markdownファイルの保存。</p>
      *
+     * @param markdownContent マークダウンファイルに出力するテキスト
+     * @param savePath 保存先のパス
      */
     @Override
     public void saveMarkdownFile(String markdownContent, Path savePath) throws IOException {
@@ -162,7 +167,7 @@ public class MarkdownGeneratorImpl implements MarkdownGenerator {
                 # 📅 %s 週の技術系ニュースまとめ
                 
                 ## 概要
-                過去1週間（%d件）の主要な技術系ニュースをまとめました。
+                - 過去1週間（%d件）の主要な技術系ニュースをまとめました。
                 
                 ---
                 
@@ -180,7 +185,7 @@ public class MarkdownGeneratorImpl implements MarkdownGenerator {
             String category = article.getAiCategory() != null ? article.getAiCategory() : "その他";
 
             if (!category.equals(currentCategory)) {
-                markdownContent.append(String.format("\n## 🚀 %s \n\n", category));
+                markdownContent.append(String.format("\n## 🚀 %s\n\n", category));
                 currentCategory = category;
             }
 
@@ -206,11 +211,13 @@ public class MarkdownGeneratorImpl implements MarkdownGenerator {
 
         return String.format("""
                 ### 🌐 %s
+                
                 - **カテゴリ**: `%s`
                 - **公開日**: %s (%s)
                 - **URL**: [記事を読む](%s)
                 - 📰 **AI要約**: %s
                 - 💡 **自分のコメント欄**:
+                
                 """,
                 article.getNewsTitle(),
                 category,
