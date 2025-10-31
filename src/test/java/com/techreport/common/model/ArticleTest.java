@@ -9,9 +9,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * <p>{@link Article} のテストを行う。</p>
  *
  * <ul>
- *     <li>toString の正常系。</li>
- *     <li>getter 系の正常系。</li>
- *     <li>setter 系の正常系。</li>
+ *     <li>{@link #toStringSuccess01} toString の正常系。</li>
+ *     <li>{@link #getterSuccess01} getter 系の正常系。</li>
+ *     <li>{@link #setterSuccess01} setter 系の正常系。</li>
  * </ul>
  */
 public class ArticleTest {
@@ -52,7 +52,11 @@ public class ArticleTest {
      */
     @Test
     public void getterSuccess01() {
+
+        //
         // 事前準備
+        //
+
         LocalDateTime localDateTime = LocalDateTime.of(2025, 1, 1, 10, 30, 0);
 
         // Article の生成
@@ -64,7 +68,10 @@ public class ArticleTest {
                 "これはテストです。"
         );
 
-        // 検証
+        //
+        // 実行・検証
+        //
+
         assertEquals("ニューステスト", article.getNewsTitle());
         assertEquals("https://abehiroshi.la.coocan.jp/", article.getUrl());
         assertEquals("ニュースサイト", article.getSiteName());
@@ -74,8 +81,15 @@ public class ArticleTest {
         assertEquals("", article.getAiCategory());
     }
 
+    /**
+     * <p>setter 系の正常系。</p>
+     */
     @Test
     public void setterSuccess01() {
+
+        //
+        // 事前準備
+        //
 
         // Article の生成
         Article article = new Article(
@@ -86,7 +100,6 @@ public class ArticleTest {
                 "これはテストです。"
         );
 
-        // 実行
         article.setNewsTitle("更新ニュース");
         article.setUrl("https://ja.wikipedia.org/wiki/阿部寛のホームページ");
         article.setSiteName("ホームページ");
@@ -104,7 +117,9 @@ public class ArticleTest {
                 "aiSummary='AAA', " +
                 "aiCategory='AI'}";
 
-        // 検証
+        //
+        // 実行・検証
+        //
         assertEquals(expected, article.toString());
     }
 

@@ -49,6 +49,11 @@ public class AppConfig {
         return openAIApiKey;
     }
 
+    /**
+     * <p>RSSフィードリストのパスの取得。</p>
+     *
+     * @return フィードリストのパス
+     */
     public String getFeedListPath() {
         return feedListPath;
     }
@@ -62,15 +67,39 @@ public class AppConfig {
         return weeklyDays;
     }
 
+    /**
+     * <p>生成したマークダウンのレポートを保存するディレクトリの取得。</p>
+     *
+     * @return ディレクトリのパス
+     */
     public String getReportDir() {
         return reportDir;
     }
 
+    /**
+     * <p>使用するLLMモデル名の取得。</p>
+     *
+     * @return モデル名
+     */
     public String getLlmGpt(){
         return llmGpt;
     }
 
-    public void setReportDir(String reportDir){
+    /**
+     * <p>OpenAI の API Keyの設定。</p>
+     *
+     * @param openAIApiKey API Key
+     */
+    public void setOpenAIApiKey(String openAIApiKey) {
+        this.openAIApiKey = openAIApiKey;
+    }
+
+    /**
+     * <p>レポートを保存するディレクトリの設定。</p>
+     *
+     * @param reportDir ディレクトリのパス
+     */
+    public void setReportDir(String reportDir) {
         this.reportDir = reportDir;
     }
 

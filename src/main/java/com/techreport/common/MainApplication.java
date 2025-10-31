@@ -13,10 +13,13 @@ import java.nio.file.Path;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * <p>アプリケーションを起動するメインクラス。</p>
+ */
 @SpringBootApplication(scanBasePackages = "com.techreport.common")
 public class MainApplication implements CommandLineRunner {
 
-    // サービスをコンストラクタインジェクションで取得
+    // ロジックをコンストラクタインジェクションで取得
     private final NewsFetcher newsFetcher;
     private final LLMSummarizer llmSummarizer;
     private final MarkdownGenerator markdownGenerator;
