@@ -3,7 +3,10 @@ package com.techreport.common.logic;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.techreport.common.AppConfig;
+import com.techreport.common.LogicException;
 import com.techreport.common.model.Article;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -15,15 +18,29 @@ import java.time.Duration;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * <p>AIを使用して記事の要約とカテゴリ分類を行うロジックの実装クラス。</p>
+ */
 @Service
 public class LLMSummarizerImpl implements LLMSummarizer {
 
+    // ログ出力の設定
+    private static final Logger LOGGER = LoggerFactory.getLogger(LLMSummarizerImpl.class);
+    // アプリケーション設定
     private final AppConfig appConfig;
+    // JSON処理用
     private final ObjectMapper objectMapper;
+    // HTTPクライアント
     private final HttpClient httpClient;
+    // OpenAI APIエンドポイント
     private static final String OPENAI_API_URL = "https://api.openai.com/v1/chat/completions";
 
-
+    /**
+     * <p>コンストラクタ。</p>
+     *
+     * @param appConfig　アプリケーション設定
+     * @param objectMapper JSON処理用オブジェクトマッパー
+     */
     public LLMSummarizerImpl(AppConfig appConfig, ObjectMapper objectMapper) {
         this.appConfig = appConfig;
         this.objectMapper = objectMapper;
@@ -33,14 +50,15 @@ public class LLMSummarizerImpl implements LLMSummarizer {
     }
 
     /**
-     * 記事リストを順次処理し、AI要約とカテゴリ分類を追加します。
+     * <p>記事リストを順次処理し、AI要約とカテゴリ分類を追加します。</p>
+     *
      * @param articles 処理前の記事リスト
      * @return 処理後の記事リスト
      */
     @Override
     public List<Article> processArticles(List<Article> articles) {
         if (appConfig.getOpenAiApiKey() == null || appConfig.getOpenAiApiKey().isEmpty()) {
-            System.err.println("Warning: OpenAI API Key is missing. Skipping LLM summarization.");
+            LOGGER.error("Warning: OpenAI API Key is missing. Skipping LLM summarization.");
             return articles;
         }
 
@@ -65,7 +83,16 @@ public class LLMSummarizerImpl implements LLMSummarizer {
         return articles;
     }
 
-    private Map<String, String> summarizeArticle(Article article) throws IOException, InterruptedException {
+    /**
+     * <p>単一の記事をAIに要約・カテゴリ分類させる。</p>
+     *
+     * @param article 記事データオブジェクト
+     * @return 要約とカテゴリを含むマップ
+     * @throws IOException
+     * @throws InterruptedException
+     * @throws LogicException ロジック例外
+     */
+    private Map<String, String> summarizeArticle(Article article) throws IOException, InterruptedException, LogicException {
         String prompt = appConfig.getPromptTemplate()
                 .replace("{title}", article.getNewsTitle())
                 .replace("{summary_excerpt}", article.getAiSummary().substring(0, Math.min(500, article.getAiSummary().length())));
@@ -92,7 +119,7 @@ public class LLMSummarizerImpl implements LLMSummarizer {
         HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
 
         if (response.statusCode() != 200) {
-            throw new IOException("API call failed with status " + response.statusCode() + ": " + response.body());
+            throw new LogicException("API call failed with status " + response.statusCode() + ": " + response.body());
         }
 
         // 4. JSONレスポンスのパース
@@ -103,7 +130,7 @@ public class LLMSummarizerImpl implements LLMSummarizer {
         List<Map<String, Object>> choices = (List<Map<String, Object>>) responseMap.get("choices");
 
         if (choices == null || choices.isEmpty()) {
-            throw new IOException("API response has no choices.");
+            throw new LogicException("API response has no choices.");
         }
 
         @SuppressWarnings("unchecked")

@@ -19,4 +19,13 @@ public class LogicException extends Exception {
     public LogicException(String message, Throwable cause) {
         super(message, cause);
     }
+
+    /**
+     * <p>指定された詳細メッセージを使用して新規例外を生成します。</p>
+     *
+     * @param message 例外の詳細メッセージ
+     */
+    public LogicException(String message) {
+        super(message);
+    }
 }
