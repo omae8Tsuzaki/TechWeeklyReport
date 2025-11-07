@@ -5,6 +5,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.techreport.common.AppConfig;
 import com.techreport.common.LogicException;
 import com.techreport.common.model.Article;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -22,6 +24,8 @@ import java.util.Map;
 @Service
 public class LLMSummarizerImpl implements LLMSummarizer {
 
+    // ログ出力の設定
+    private static final Logger LOGGER = LoggerFactory.getLogger(LLMSummarizerImpl.class);
     // アプリケーション設定
     private final AppConfig appConfig;
     // JSON処理用
@@ -54,7 +58,7 @@ public class LLMSummarizerImpl implements LLMSummarizer {
     @Override
     public List<Article> processArticles(List<Article> articles) {
         if (appConfig.getOpenAiApiKey() == null || appConfig.getOpenAiApiKey().isEmpty()) {
-            System.err.println("Warning: OpenAI API Key is missing. Skipping LLM summarization.");
+            LOGGER.error("Warning: OpenAI API Key is missing. Skipping LLM summarization.");
             return articles;
         }
 
@@ -86,6 +90,7 @@ public class LLMSummarizerImpl implements LLMSummarizer {
      * @return 要約とカテゴリを含むマップ
      * @throws IOException
      * @throws InterruptedException
+     * @throws LogicException ロジック例外
      */
     private Map<String, String> summarizeArticle(Article article) throws IOException, InterruptedException, LogicException {
         String prompt = appConfig.getPromptTemplate()

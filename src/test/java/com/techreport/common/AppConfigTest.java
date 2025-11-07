@@ -11,6 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * <p>{@link AppConfig} のテストを行う。</p>
  * <ul>
  *     <li>{@link #getterSuccess01()} getter の正常系。</li>
+ *     <li>{@link #setterSuccess01()} setter の正常系。</li>
  * </ul>
  */
 @SpringBootTest
@@ -59,11 +60,14 @@ public class AppConfigTest {
 
         String testDir = "test/dir";
         config.setReportDir(testDir);
+        String openaiKey = "openai-key-test";
+        config.setOpenAIApiKey(openaiKey);
 
         //
         // 実行・検証
         //
 
         assertEquals(testDir, config.getReportDir());
+        assertEquals(openaiKey, config.getOpenAiApiKey());
     }
 }

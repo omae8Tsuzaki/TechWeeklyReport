@@ -95,7 +95,7 @@ public class MarkdownGeneratorImpl implements MarkdownGenerator {
 
             // ファイル書き込み
             Files.writeString(savePath, markdownContent, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING, StandardOpenOption.WRITE);
-            System.out.println("Saved report to " + savePath.toAbsolutePath());
+            LOGGER.info("Saved report to " + savePath.toAbsolutePath());
 
         } catch (AccessDeniedException ade) {
             System.err.println("Permission denied writing to " + savePath + ": " + ade.getMessage());
@@ -123,7 +123,7 @@ public class MarkdownGeneratorImpl implements MarkdownGenerator {
     @Override
     public Map.Entry<String, Path> generateWeeklyMarkdown(List<Article> articles) {
         if (articles == null || articles.isEmpty()) {
-            System.out.println("No articles to generate report.");
+            LOGGER.info("No articles to generate report.");
             return null;
         }
 
@@ -140,7 +140,6 @@ public class MarkdownGeneratorImpl implements MarkdownGenerator {
                 .map(Article::getLocalDateTime)
                 .max(Comparator.naturalOrder())
                 .orElseGet(LocalDateTime::now);
-
 
         // レポートの日付を決定 (最も新しい記事の日付をJSTに変換)
         ZonedDateTime reportDateJST = latestLdt
@@ -167,12 +166,12 @@ public class MarkdownGeneratorImpl implements MarkdownGenerator {
                 # 📅 %s 週の技術系ニュースまとめ
                 
                 ## 概要
+                
                 - 過去1週間（%d件）の主要な技術系ニュースをまとめました。
                 
                 ---
                 
                 ## 記事一覧 (カテゴリ別)
-                
                 """,
                 reportDateJST.format(DATE_FORMATTER),
                 reportDateJST.format(DATE_FORMATTER),

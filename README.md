@@ -4,14 +4,18 @@
 
 ## 概要
 
-- TechWeeklyReportは、毎週の技術系ニュースを自動で収集しマークダウンファイルを生成します。
+- TechWeeklyReport は、毎週の技術系ニュースを自動で収集しマークダウンファイルを生成します。
+
+## 生成されたレポート
+
+- [レポート](reports/Tech-News/README.md)
 
 ## 構成
 
 ```
 ├── .github/
 │   └── workflows/
-│       └── weekly_summary.yml  # Javaのビルドと実行コマンドに修正
+│       └── weekly_summary.yml  # Java のビルドと実行コマンドに修正
 ├── src/
 │   └── main/
 │       ├── java/

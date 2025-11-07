@@ -86,6 +86,15 @@ public class AppConfig {
     }
 
     /**
+     * <p>OpenAI の API Keyの設定。</p>
+     *
+     * @param openAIApiKey API Key
+     */
+    public void setOpenAIApiKey(String openAIApiKey) {
+        this.openAIApiKey = openAIApiKey;
+    }
+
+    /**
      * <p>レポートを保存するディレクトリの設定。</p>
      *
      * @param reportDir ディレクトリのパス

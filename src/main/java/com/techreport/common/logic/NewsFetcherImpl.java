@@ -102,7 +102,7 @@ public class NewsFetcherImpl implements NewsFetcher {
                 // 2. 取得した文字列をStringReaderを介してRomeに渡す
                 try (StringReader reader = new StringReader(response.body())) {
                     SyndFeed feed = input.build(reader);
-                    System.out.println("  - Fetched: " + feedName);
+                    LOGGER.info("  - Fetched: {}", feedName);
 
                     for (SyndEntry entry : feed.getEntries()) {
                         Date publishedDate = entry.getPublishedDate();
@@ -126,14 +126,14 @@ public class NewsFetcherImpl implements NewsFetcher {
                     }
                 }
             } catch (IOException | InterruptedException e) {
-                System.err.println("Network/IO Error for feed " + feedName + ": " + e.getMessage());
+                LOGGER.error("Network/IO Error for feed {}: {}", feedName, e.getMessage());
             } catch (Exception e) {
-                System.err.println("Parsing Error for feed " + feedName + ": " + e.getMessage());
+                LOGGER.error("Parsing Error for feed {}: {}", feedName, e.getMessage());
             }
         }
 
         List<Article> result = new ArrayList<>(allArticles);
-        System.out.println("Total unique articles collected: " + result.size());
+        LOGGER.info("Total unique articles collected: {}", result.size());
         return result;
     }
 }
