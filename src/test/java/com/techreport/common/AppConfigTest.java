@@ -40,7 +40,8 @@ public class AppConfigTest {
                         ---
                         記事タイトル: {title}
                         記事概要（または一部本文）: {summary_excerpt}
-                        ---""", config.getPromptTemplate());
+                        ---"""
+                , config.getPromptTemplate());
         assertEquals("dummy-key", config.getOpenAiApiKey());
         assertEquals("src/test/resources/feed_list_test.json", config.getFeedListPath());
         assertEquals(3, config.getWeeklyDays());

@@ -110,17 +110,20 @@ public class NewsFetcherImplTest {
         //
         // 事前準備
         //
+
         NewsFetcherImpl newsFetcher = new NewsFetcherImpl(appConfig, objectMapper);
 
         //
         // 実行
         //
+
         // 存在しないファイルパス
         List<Map<String, String>> result = newsFetcher.loadFeedList("path/that/does/not/exist/feed_list.json");
 
         //
         // 検証
         //
+
         assertEquals(0, result.size());
     }
 }

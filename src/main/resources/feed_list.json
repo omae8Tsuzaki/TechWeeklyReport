@@ -12,10 +12,6 @@
     "url": "https://www.publickey1.jp/atom.xml"
   },
   {
-    "name": "InfoQ (日本語)",
-    "url": "https://www.infoq.com/jp/feed/news/"
-  },
-  {
     "name": "企業テックブログ",
     "url": "https://yamadashy.github.io/tech-blog-rss-feed/feeds/rss.xml"
   }
