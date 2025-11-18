@@ -11,6 +11,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 # 2. 実行するジョブを定義
 jobs:
@@ -56,5 +57,6 @@ jobs:
           commit_message: "Auto: Generated weekly tech report"
           # reports/ ディレクトリ以下のMarkdownファイルのみをコミット対象とする
           file_pattern: 'reports/**/*.md'
+          skip_dirty_check: true
           # Git Auto CommitがプッシュできるようにGitHub Tokenを使用
           github_token: ${{ secrets.GITHUB_TOKEN }}

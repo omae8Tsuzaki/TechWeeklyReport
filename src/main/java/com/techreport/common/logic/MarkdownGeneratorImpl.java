@@ -184,7 +184,7 @@ public class MarkdownGeneratorImpl implements MarkdownGenerator {
             String category = article.getAiCategory() != null ? article.getAiCategory() : "その他";
 
             if (!category.equals(currentCategory)) {
-                markdownContent.append(String.format("\n## 🚀 %s\n\n", category));
+                markdownContent.append(String.format("## 🚀 %s\n\n", category));
                 currentCategory = category;
             }
 
