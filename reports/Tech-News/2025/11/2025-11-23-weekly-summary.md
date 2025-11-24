@@ -299,4 +299,3 @@ tags: weekly-report, tech-news, auto-generated
 - **URL**: [記事を読む](https://www.publickey1.jp/blog/25/2026ai.html)
 - 📰 **AI要約**: ガートナーが2026年の戦略的テクノロジートレンドを発表。AIネイティブ開発プラットフォームやコンフィデンシャルコンピューティング、ドメイン特化型言語モデルが注目されている。
 - 💡 **自分のコメント欄**:
-
