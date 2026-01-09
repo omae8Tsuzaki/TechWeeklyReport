@@ -23,9 +23,11 @@ public class AppConfigTest {
 
     /**
      * <p>getter の正常系。</p>
+     *
+     * @throws Exception 例外が発生した場合
      */
     @Test
-    public void getterSuccess01() {
+    public void getterSuccess01() throws Exception {
 
         //
         // 実行・検証
@@ -51,9 +53,11 @@ public class AppConfigTest {
 
     /**
      * <p>setter の正常系。</p>
+     *
+     * @throws Exception 例外が発生した場合
      */
     @Test
-    public void setterSuccess01() {
+    public void setterSuccess01() throws Exception {
 
         //
         // 事前準備

@@ -15,6 +15,7 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * <p>{@link LLMSummarizer} の実装のテストを行う。</p>
  *
+ * <h4>{@link LLMSummarizer#processArticles} メソッド</h4>
  * <ul>
  *     <li>{@link #processArticlesSuccess01} 正常系：openai.api.keyが null の場合。</li>
  *     <li>{@link #processArticlesSuccess02} 正常系：openai.api.keyが 空文字 の場合。</li>
@@ -30,13 +31,16 @@ public class LLMSummarizerImplTest {
 
     /**
      * <p>正常系：openai.api.keyが null の場合。</p>
+     *
+     * @throws Exception 例外が発生した場合
      */
     @Test
-    public void processArticlesSuccess01() {
+    public void processArticlesSuccess01() throws Exception {
 
         //
         // 事前準備
         //
+
         LocalDateTime localDateTime = LocalDateTime.of(2024, 6, 1, 10, 0, 0);
         Article article = new Article(
                 "ニュースタイトル01",
@@ -54,11 +58,13 @@ public class LLMSummarizerImplTest {
         //
         // 実行
         //
+
         List<Article> result = logic.processArticles(articleList);
 
         //
         // 検証
         //
+
         assertEquals(
                 "[Article{" +
                         "newsTitle='ニュースタイトル01', " +
@@ -73,12 +79,16 @@ public class LLMSummarizerImplTest {
 
     /**
      * <p>正常系：openai.api.keyが 空文字 の場合。</p>
+     *
+     * @throws Exception 例外が発生した場合
      */
     @Test
-    public void processArticlesSuccess02() {
+    public void processArticlesSuccess02() throws Exception {
+
         //
         // 事前準備
         //
+
         LocalDateTime localDateTime = LocalDateTime.of(2024, 6, 1, 10, 0, 0);
         Article article = new Article(
                 "ニュースタイトル01",
@@ -96,11 +106,13 @@ public class LLMSummarizerImplTest {
         //
         // 実行
         //
+
         List<Article> result = logic.processArticles(articleList);
 
         //
         // 検証
         //
+
         assertEquals(
                 "[Article{" +
                         "newsTitle='ニュースタイトル01', " +

@@ -5,16 +5,12 @@ import com.techreport.common.AppConfig;
 import com.techreport.common.model.Article;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.RegisterExtension;
-import org.slf4j.LoggerFactory;
-import org.slf4j.event.Level;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
 
 import java.util.List;
 import java.util.Map;
-import java.util.logging.Logger;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -69,7 +65,6 @@ public class NewsFetcherImplTest {
         //
 
         assertEquals(0, result.size());
-        // ログ確認
     }
 
     /**

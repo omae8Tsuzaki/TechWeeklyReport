@@ -347,3 +347,4 @@ tags: weekly-report, tech-news, auto-generated
 - **URL**: [記事を読む](https://zenn.dev/tmylabo/articles/google-preferred-sources-global-rollout)
 - 📰 **AI要約**: Googleが新しい機能「Preferred Sources」を発表し、ユーザーが検索結果を自分好みにカスタマイズできるようになる。これにより、検索体験が向上する。
 - 💡 **自分のコメント欄**:
+

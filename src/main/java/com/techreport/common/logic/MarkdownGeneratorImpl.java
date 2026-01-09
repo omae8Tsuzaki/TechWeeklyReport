@@ -215,6 +215,7 @@ public class MarkdownGeneratorImpl implements MarkdownGenerator {
                 - **公開日**: %s (%s)
                 - **URL**: [記事を読む](%s)
                 - 📰 **AI要約**: %s
+                - 💡 **自分のコメント欄**:
                 
                 """,
                 article.getNewsTitle(),

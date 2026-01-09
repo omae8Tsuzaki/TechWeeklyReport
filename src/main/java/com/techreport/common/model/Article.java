@@ -1,7 +1,6 @@
 package com.techreport.common.model;
 
 import java.time.LocalDateTime;
-import java.time.ZonedDateTime;
 
 /**
  * <p>記事の情報を保持するクラス。</p>

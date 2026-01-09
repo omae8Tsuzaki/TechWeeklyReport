@@ -88,8 +88,8 @@ public class LLMSummarizerImpl implements LLMSummarizer {
      *
      * @param article 記事データオブジェクト
      * @return 要約とカテゴリを含むマップ
-     * @throws IOException
-     * @throws InterruptedException
+     * @throws IOException I/O例外
+     * @throws InterruptedException 割り込み例外
      * @throws LogicException ロジック例外
      */
     private Map<String, String> summarizeArticle(Article article) throws IOException, InterruptedException, LogicException {

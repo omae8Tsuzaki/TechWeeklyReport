@@ -331,3 +331,4 @@ tags: weekly-report, tech-news, auto-generated
 - **URL**: [記事を読む](https://www.publickey1.jp/blog/25/anthropicaiagent_skillsvs_codecursor.html)
 - 📰 **AI要約**: AnthropicがAIエージェントにタスクの手順や知識を組み込む「Agent Skills」をオープンスタンダードとして発表。VS CodeやCursorが早速これをサポート。
 - 💡 **自分のコメント欄**:
+

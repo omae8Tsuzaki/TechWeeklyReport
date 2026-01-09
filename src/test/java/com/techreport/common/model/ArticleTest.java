@@ -18,10 +18,16 @@ public class ArticleTest {
 
     /**
      * <p>toString の正常系。</p>
+     *
+     * @throws Exception 例外が発生した場合
      */
     @Test
-    public void toStringSuccess01() {
+    public void toStringSuccess01() throws Exception {
+
+        //
         // 事前準備
+        //
+
         LocalDateTime localDateTime = LocalDateTime.of(2025, 1, 1, 10, 30, 0);
 
         // Article の生成
@@ -42,16 +48,20 @@ public class ArticleTest {
                 "aiSummary='', " +
                 "aiCategory=''}";
 
-        // 検証
-        assertEquals(expected, article.toString());
+        //
+        // 実行・検証
+        //
 
+        assertEquals(expected, article.toString());
     }
 
     /**
      * <p>getter 系の正常系。</p>
+     *
+     * @throws Exception 例外が発生した場合
      */
     @Test
-    public void getterSuccess01() {
+    public void getterSuccess01() throws Exception {
 
         //
         // 事前準備
@@ -83,9 +93,11 @@ public class ArticleTest {
 
     /**
      * <p>setter 系の正常系。</p>
+     *
+     * @throws Exception 例外が発生した場合
      */
     @Test
-    public void setterSuccess01() {
+    public void setterSuccess01() throws Exception {
 
         //
         // 事前準備
@@ -120,6 +132,7 @@ public class ArticleTest {
         //
         // 実行・検証
         //
+
         assertEquals(expected, article.toString());
     }
 

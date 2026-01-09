@@ -14,7 +14,6 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.logging.Logger;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -40,7 +39,6 @@ public class MarkdownGeneratorImplTest {
     private File temporaryFolder;
     // 日付フォーマット
     private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-
 
     /**
      * <p>マークダウンファイルを保存するメソッドの正常系。</p>
@@ -90,9 +88,11 @@ public class MarkdownGeneratorImplTest {
 
     /**
      * <p>正常系：引数に空のエンティティを渡した場合。</p>
+     *
+     * @throws Exception 例外が発生した場合
      */
     @Test
-    public void generateWeeklyMarkdownSuccess02() {
+    public void generateWeeklyMarkdownSuccess02() throws Exception {
         List<Article> articles = new ArrayList<>();
 
         //
@@ -104,13 +104,16 @@ public class MarkdownGeneratorImplTest {
 
     /**
      * <p>正常系：記事リストを渡した場合。</p>
+     *
+     * @throws Exception 例外が発生した場合
      */
     @Test
-    public void generateWeeklyMarkdownSuccess03() {
+    public void generateWeeklyMarkdownSuccess03() throws Exception {
 
         //
         // 事前準備
         //
+
         LocalDateTime localDateTime = LocalDateTime.of(2024, 6, 1, 10, 0, 0);
 
         Article article01 = new Article(
@@ -140,11 +143,13 @@ public class MarkdownGeneratorImplTest {
         //
         // 実行
         //
+
         Map.Entry<String, Path> result = logic.generateWeeklyMarkdown(articleList);
 
         //
         // 検証
         //
+
         assertEquals(
                 """
                         ---
@@ -161,7 +166,6 @@ public class MarkdownGeneratorImplTest {
                         ---
                         
                         ## 記事一覧 (カテゴリ別)
-                        
                         ## 🚀 AI
                         
                         ### 🌐 ニュースタイトル01
@@ -170,7 +174,6 @@ public class MarkdownGeneratorImplTest {
                         - **公開日**: 2024-06-01 19:00 (サイト名01)
                         - **URL**: [記事を読む](http://example.com/news1)
                         - 📰 **AI要約**: AIによる要約01
-                        - 💡 **自分のコメント欄**:
                         
                         ### 🌐 ニュースタイトル02
                         
@@ -178,7 +181,6 @@ public class MarkdownGeneratorImplTest {
                         - **公開日**: 2024-06-01 19:00 (サイト名02)
                         - **URL**: [記事を読む](http://example.com/news2)
                         - 📰 **AI要約**: AIによる要約02
-                        - 💡 **自分のコメント欄**:
                         
                         """,
                 result.getKey());
