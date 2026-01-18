@@ -293,4 +293,3 @@ tags: weekly-report, tech-news, auto-generated
 - **URL**: [記事を読む](https://www.publickey1.jp/blog/26/slackbotai.html)
 - 📰 **AI要約**: セールスフォースがSlackbotにAIエージェント機能を追加。チャット履歴からコンテキストを理解し、議論の要約やスケジュール調整を行うパーソナルアシスタントとして利用可能に。
 - 💡 **自分のコメント欄**:
-

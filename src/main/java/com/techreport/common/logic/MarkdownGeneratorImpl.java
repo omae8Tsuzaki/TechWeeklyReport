@@ -3,6 +3,8 @@ package com.techreport.common.logic;
 import com.techreport.common.AppConfig;
 import com.techreport.common.LogicException;
 import com.techreport.common.model.Article;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,8 +19,6 @@ import java.time.format.DateTimeFormatter;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * <p>Markdown生成用ロジックの実装クラス。</p>
@@ -31,7 +31,8 @@ public class MarkdownGeneratorImpl implements MarkdownGenerator {
     private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd");
     private static final DateTimeFormatter DATETIME_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
 
-    private static final Logger LOGGER = Logger.getLogger(MarkdownGeneratorImpl.class.getName());
+    // ログ出力の設定
+    private static final Logger LOGGER = LoggerFactory.getLogger(MarkdownGeneratorImpl.class);
 
     // コンストラクタ（Springインジェクションを想定）
     public MarkdownGeneratorImpl() {
@@ -60,7 +61,7 @@ public class MarkdownGeneratorImpl implements MarkdownGenerator {
             // ファイルに書き込み (UTF-8)
             Files.writeString(output.toPath(), markdownContent);
 
-            LOGGER.log(Level.INFO, "ファイルの書き込み成功");
+            LOGGER.info("ファイルの書き込み成功");
         } catch (IOException e) {
             throw new LogicException("Failed to save markdown", e);
         }

@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 public class AppConfig {
     // 環境変数からAPIキーを取得
     @Value("${techReport.openai.api-key}")
-    public String openAIApiKey;
+    private String openAIApiKey;
 
     @Value("${techReport.prompt-template}")
     private String promptTemplate;
