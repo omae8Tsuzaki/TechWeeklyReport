@@ -66,7 +66,7 @@ public class LLMSummarizerImpl implements LLMSummarizer {
             Article article = articles.get(i);
 
             if (i > 0 && i % 10 == 0) {
-                System.out.printf("  - Processing article %d/%d...%n", i + 1, articles.size());
+                LOGGER.info("Processing article {}/{}: {}", i + 1, articles.size(), article.getNewsTitle());
             }
 
             try {
@@ -75,7 +75,7 @@ public class LLMSummarizerImpl implements LLMSummarizer {
                 article.setAiCategory(aiResult.getOrDefault("category", "その他"));
 
             } catch (Exception e) {
-                System.err.printf("  - AI summarization failed for '%s': %s%n", article.getNewsTitle(), e.getMessage());
+                LOGGER.error("AI summarization failed for '{}': {}", article.getNewsTitle(), e.getMessage());
                 article.setAiSummary(article.getOriginalSummary().substring(0, Math.min(200, article.getOriginalSummary().length())) + "...");
                 article.setAiCategory("要約エラー");
             }
@@ -95,7 +95,7 @@ public class LLMSummarizerImpl implements LLMSummarizer {
     private Map<String, String> summarizeArticle(Article article) throws IOException, InterruptedException, LogicException {
         String prompt = appConfig.getPromptTemplate()
                 .replace("{title}", article.getNewsTitle())
-                .replace("{summary_excerpt}", article.getAiSummary().substring(0, Math.min(500, article.getAiSummary().length())));
+                .replace("{summary_excerpt}", article.getOriginalSummary().substring(0, Math.min(500, article.getAiSummary().length())));
 
         // 1. リクエストボディの構築 (Jacksonを使用)
         String requestBody = objectMapper.writeValueAsString(Map.of(

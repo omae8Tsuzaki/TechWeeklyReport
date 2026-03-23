@@ -28,6 +28,7 @@ public class MarkdownGeneratorImpl implements MarkdownGenerator {
 
     @Autowired
     private AppConfig config;
+    private static final String ASIA_TOKYO = "Asia/Tokyo";
     private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd");
     private static final DateTimeFormatter DATETIME_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
 
@@ -96,17 +97,17 @@ public class MarkdownGeneratorImpl implements MarkdownGenerator {
 
             // ファイル書き込み
             Files.writeString(savePath, markdownContent, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING, StandardOpenOption.WRITE);
-            LOGGER.info("Saved report to " + savePath.toAbsolutePath());
+            LOGGER.info("Saved report to {}" , savePath.toAbsolutePath());
 
         } catch (AccessDeniedException ade) {
-            System.err.println("Permission denied writing to " + savePath + ": " + ade.getMessage());
+            LOGGER.error("Permission denied writing to {}: {}", savePath, ade.getMessage());
             // フォールバック: ユーザーホーム配下へ保存を試みる
             try {
                 Path fallbackDir = Paths.get(System.getProperty("user.home"), "reports", "Tech-News");
                 Files.createDirectories(fallbackDir);
                 Path fallbackFile = fallbackDir.resolve(savePath.getFileName());
                 Files.writeString(fallbackFile, markdownContent, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING, StandardOpenOption.WRITE);
-                System.out.println("Saved report to fallback path " + fallbackFile.toAbsolutePath());
+                LOGGER.error("Saved report to fallback path {}" , fallbackFile.toAbsolutePath());
             } catch (IOException ex) {
                 throw new RuntimeException("Failed to save markdown to fallback path", ex);
             }
@@ -145,7 +146,7 @@ public class MarkdownGeneratorImpl implements MarkdownGenerator {
         // レポートの日付を決定 (最も新しい記事の日付をJSTに変換)
         ZonedDateTime reportDateJST = latestLdt
                 .atZone(ZoneOffset.UTC) // LocalDateTimeをUTCの日時として扱う
-                .withZoneSameInstant(ZoneId.of("Asia/Tokyo")); // JSTに変換
+                .withZoneSameInstant(ZoneId.of(ASIA_TOKYO)); // JSTに変換
 
         // ファイル名とディレクトリパスの決定
         String filename = reportDateJST.format(DATE_FORMATTER) + "-weekly-summary.md";
@@ -207,7 +208,7 @@ public class MarkdownGeneratorImpl implements MarkdownGenerator {
         // ArticleのLocalDateTime (UTC相当) をJSTに変換して表示
         ZonedDateTime publishedJST = article.getLocalDateTime()
                 .atZone(ZoneOffset.UTC) // UTCとして扱う
-                .withZoneSameInstant(ZoneId.of("Asia/Tokyo")); // JSTに変換
+                .withZoneSameInstant(ZoneId.of(ASIA_TOKYO)); // JSTに変換
 
         return String.format("""
                 ### 🌐 %s

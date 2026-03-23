@@ -45,6 +45,7 @@ public class AppConfigTest {
                         ---"""
                 , config.getPromptTemplate());
         assertEquals("dummy-key", config.getOpenAiApiKey());
+        assertEquals("https://api.openai.com/v1/chat/completions", config.getOpenAIEndPoint());
         assertEquals("src/test/resources/feed_list_test.json", config.getFeedListPath());
         assertEquals(3, config.getWeeklyDays());
         assertEquals("reports/Tech-News", config.getReportDir());

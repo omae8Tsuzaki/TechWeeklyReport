@@ -12,6 +12,10 @@ public class AppConfig {
     @Value("${techReport.openai.api-key}")
     private String openAIApiKey;
 
+    // OpenAI の API エンドポイント
+    @Value("${techReport.openai.endpoint}")
+    private String openAIEndPoint;
+
     @Value("${techReport.prompt-template}")
     private String promptTemplate;
 
@@ -41,12 +45,21 @@ public class AppConfig {
     }
 
     /**
-     * <p>OpenAI の API Keyの取得。</p>
+     * <p>OpenAI の API Key の取得。</p>
      *
      * @return API Key
      */
     public String getOpenAiApiKey() {
         return openAIApiKey;
+    }
+
+    /**
+     * <p>OpenAI の API エンドポイントの取得。</p>
+     *
+     * @return OpenAI の API エンドポイント
+     */
+    public String getOpenAIEndPoint() {
+        return openAIEndPoint;
     }
 
     /**
