@@ -1,7 +1,5 @@
 plugins {
     id("java")
-    id ("org.springframework.boot") version ("3.5.7")
-    id ("io.spring.dependency-management") version ("1.1.5")
 }
 
 group = "org.example"
@@ -12,15 +10,22 @@ repositories {
 }
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter")
-    implementation("org.springframework.boot:spring-boot-starter-json")
-    implementation("com.fasterxml.jackson.core:jackson-databind:2.20.0")
-    implementation("com.rometools:rome:2.1.0")
-    annotationProcessor ("org.springframework.boot:spring-boot-configuration-processor")
-    testImplementation(platform("org.junit:junit-bom:5.10.0"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
-    testImplementation("org.springframework.boot:spring-boot-starter-test")
-    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+    // Spring
+    implementation(libs.spring.boot.starter)
+    implementation(libs.spring.boot.starter.json)
+    implementation(platform(libs.spring.boot.bom))
+    testImplementation(libs.spring.boot.starter.test)
+    annotationProcessor (libs.spring.boot.configuration.processor)
+
+    //Jackson
+    implementation(libs.jackson.databind)
+    // Rome
+    implementation(libs.rome)
+
+    // Junit
+    testImplementation(platform(libs.junit.bom))
+    testImplementation(libs.junit.jupiter)
+    testRuntimeOnly(libs.junit.platform.launcher)
 }
 
 tasks.test {

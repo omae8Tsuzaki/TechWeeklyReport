@@ -32,8 +32,6 @@ public class LLMSummarizerImpl implements LLMSummarizer {
     private final ObjectMapper objectMapper;
     // HTTPクライアント
     private final HttpClient httpClient;
-    // OpenAI APIエンドポイント
-    private static final String OPENAI_API_URL = "https://api.openai.com/v1/chat/completions";
 
     /**
      * <p>コンストラクタ。</p>
@@ -108,7 +106,7 @@ public class LLMSummarizerImpl implements LLMSummarizer {
         ));
 
         // 2. HTTPリクエストの構築
-        HttpRequest request = HttpRequest.newBuilder(URI.create(OPENAI_API_URL))
+        HttpRequest request = HttpRequest.newBuilder(URI.create(appConfig.getOpenAIEndPoint()))
                 .header("Content-Type", "application/json")
                 .header("Authorization", "Bearer " + appConfig.getOpenAiApiKey())
                 .POST(HttpRequest.BodyPublishers.ofString(requestBody))
