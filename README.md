@@ -29,6 +29,8 @@
 │       │       │   └── MarkdownGeneratorImpl.java
 │       │       ├── model/
 │       │       │   └── Article.java
+│       │       ├── service/
+│       │       │   └── GenerateReportService.java
 │       │       ├── AppConfig.java
 │       │       ├── LogicException.java
 │       │       └── MainApplication.java
