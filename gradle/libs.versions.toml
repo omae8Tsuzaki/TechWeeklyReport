@@ -1,6 +1,8 @@
 [versions]
 # Spring Boot
 spring-boot-version = "4.0.5"
+# Spring Dependency Management Plugin
+spring-dependency-management-version = "1.1.7"
 
 # Jackson
 jackson-version = "2.21.2"
@@ -10,9 +12,6 @@ rome-version = "2.1.0"
 
 # JUnit
 junit-bom-version = "5.10.0"
-
-# Spring Dependency Management Plugin
-spring-dependency-management-version = "1.1.7"
 
 [libraries]
 # Spring Boot
@@ -34,4 +33,7 @@ junit-jupiter = { group = "org.junit.jupiter", name = "junit-jupiter" }
 junit-platform-launcher = { group = "org.junit.platform", name = "junit-platform-launcher"}
 
 [bundles]
+
 [plugins]
+spring-boot = { id = "org.springframework.boot", version.ref = "spring-boot-version" }
+spring-dependency-management = { id = "io.spring.dependency-management", version.ref = "spring-dependency-management-version" }
