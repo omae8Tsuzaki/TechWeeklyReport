@@ -13,6 +13,7 @@ on:
 jobs:
   # @claudeメンションに応答するジョブ
   claude-response:
+    if: github.actor == 'omae8Tsuzaki'
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -20,6 +21,19 @@ jobs:
       pull-requests: write
 
     steps:
+      # 許可ユーザー以外のジョブを早期終了
+      - name: Check allowed users
+        id: check-user
+        run: |
+          ACTOR="${{ github.actor }}"
+          ALLOWED="omae8Tsuzaki"
+          if echo "$ALLOWED" | grep -w "$ACTOR" > /dev/null; then
+            echo "allowed=true" >> $GITHUB_OUTPUT
+          else
+            echo "allowed=false" >> $GITHUB_OUTPUT
+            echo "::notice::User $ACTOR is not allowed to trigger Claude."
+          fi
+
       - name: Checkout repository
         uses: actions/checkout@v5
 
