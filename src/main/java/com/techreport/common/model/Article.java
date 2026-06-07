@@ -18,7 +18,7 @@ public class Article {
     // 元の記事から取得した概要
     private String originalSummary = "";
 
-    // AIによる処理の情報
+    // AI による処理の情報
     // AI による要約
     private String aiSummary = "";
     // AI が分類したカテゴリ

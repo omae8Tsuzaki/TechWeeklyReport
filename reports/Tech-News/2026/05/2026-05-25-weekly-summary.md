@@ -363,4 +363,3 @@ tags: weekly-report, tech-news, auto-generated
 - **URL**: [記事を読む](https://www.publickey1.jp/blog/26/aipcdell_deskside_agentic_ainvidia_gb10gb300.html)
 - 📰 **AI要約**: デルは、ローカルでAIエージェントを動作させるためのデスクトップPC「Dell Deskside Agentic AI」を発表しました。NVIDIA GB10およびGB300が搭載されています。
 - 💡 **自分のコメント欄**:
-

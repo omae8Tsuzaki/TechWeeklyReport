@@ -34,7 +34,7 @@ public class GenerateReportService implements CommandLineRunner {
     }
 
     /**
-     * <p>ニュース記事を収集し、Markdownレポートの生成する。</p>
+     * <p>ニュース記事を収集し、Markdown レポートの生成する。</p>
      */
     public void generateReport() {
         LOGGER.info("--- Starting Weekly News Summary Pipeline ---");
@@ -48,11 +48,11 @@ public class GenerateReportService implements CommandLineRunner {
                 return;
             }
 
-            // 2. AIによる要約とカテゴリ分類
+            // 2. AI による要約とカテゴリ分類
             LOGGER.info("Starting AI summarization for {} articles...", articles.size());
             List<Article> processedArticles = llmSummarizer.processArticles(articles);
 
-            // 3. Markdown生成と保存
+            // 3. Markdown 生成と保存
             Map.Entry<String, Path> reportEntry = markdownGenerator.generateWeeklyMarkdown(processedArticles);
 
             if (reportEntry != null) {

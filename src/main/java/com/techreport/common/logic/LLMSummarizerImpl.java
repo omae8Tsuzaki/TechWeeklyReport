@@ -19,7 +19,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * <p>AIを使用して記事の要約とカテゴリ分類を行うロジックの実装クラス。</p>
+ * <p>AI を使用して記事の要約とカテゴリ分類を行うロジックの実装クラス。</p>
  */
 @Service
 public class LLMSummarizerImpl implements LLMSummarizer {
@@ -28,9 +28,9 @@ public class LLMSummarizerImpl implements LLMSummarizer {
     private static final Logger LOGGER = LoggerFactory.getLogger(LLMSummarizerImpl.class);
     // アプリケーション設定
     private final AppConfig appConfig;
-    // JSON処理用
+    // JSON 処理用
     private final ObjectMapper objectMapper;
-    // HTTPクライアント
+    // HTTP クライアント
     private final HttpClient httpClient;
 
     /**
@@ -48,7 +48,7 @@ public class LLMSummarizerImpl implements LLMSummarizer {
     }
 
     /**
-     * <p>記事リストを順次処理し、AI要約とカテゴリ分類を追加します。</p>
+     * <p>記事リストを順次処理し、AI 要約とカテゴリ分類を追加します。</p>
      *
      * @param articles 処理前の記事リスト
      * @return 処理後の記事リスト
@@ -82,7 +82,7 @@ public class LLMSummarizerImpl implements LLMSummarizer {
     }
 
     /**
-     * <p>単一の記事をAIに要約・カテゴリ分類させる。</p>
+     * <p>単一の記事を AI に要約・カテゴリ分類させる。</p>
      *
      * @param article 記事データオブジェクト
      * @return 要約とカテゴリを含むマップ
@@ -95,7 +95,7 @@ public class LLMSummarizerImpl implements LLMSummarizer {
                 .replace("{title}", article.getNewsTitle())
                 .replace("{summary_excerpt}", article.getOriginalSummary().substring(0, Math.min(500, article.getAiSummary().length())));
 
-        // 1. リクエストボディの構築 (Jacksonを使用)
+        // 1. リクエストボディの構築 (Jackson を使用)
         String requestBody = objectMapper.writeValueAsString(Map.of(
                 "model", appConfig.getLlmGpt(),
                 "response_format", Map.of("type", "json_object"),
@@ -105,7 +105,7 @@ public class LLMSummarizerImpl implements LLMSummarizer {
                 )
         ));
 
-        // 2. HTTPリクエストの構築
+        // 2. HTTP リクエストの構築
         HttpRequest request = HttpRequest.newBuilder(URI.create(appConfig.getOpenAIEndPoint()))
                 .header("Content-Type", "application/json")
                 .header("Authorization", "Bearer " + appConfig.getOpenAiApiKey())
@@ -113,14 +113,14 @@ public class LLMSummarizerImpl implements LLMSummarizer {
                 .timeout(Duration.ofSeconds(30))
                 .build();
 
-        // 3. APIコールの実行
+        // 3. API コールの実行
         HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
 
         if (response.statusCode() != 200) {
             throw new LogicException("API call failed with status " + response.statusCode() + ": " + response.body());
         }
 
-        // 4. JSONレスポンスのパース
+        // 4. JSON レスポンスのパース
         // レスポンス構造: { choices: [{ message: { content: "..." } }] }
         Map<String, Object> responseMap = objectMapper.readValue(response.body(), new TypeReference<>() {});
 
@@ -135,7 +135,7 @@ public class LLMSummarizerImpl implements LLMSummarizer {
         Map<String, String> message = (Map<String, String>) choices.getFirst().get("message");
         String content = message.get("content");
 
-        // LLMが出力したJSON文字列を最終的にパース
+        // LLM が出力した JSON 文字列を最終的にパース
         return objectMapper.readValue(content, new TypeReference<>() {});
     }
 }

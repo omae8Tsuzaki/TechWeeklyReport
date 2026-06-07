@@ -17,8 +17,8 @@ import static org.junit.jupiter.api.Assertions.*;
  *
  * <h4>{@link LLMSummarizer#processArticles} メソッド</h4>
  * <ul>
- *     <li>{@link #processArticlesSuccess01} 正常系：openai.api.keyが null の場合。</li>
- *     <li>{@link #processArticlesSuccess02} 正常系：openai.api.keyが 空文字 の場合。</li>
+ *     <li>{@link #processArticlesSuccess01} 正常系：openai.api.key が null の場合。</li>
+ *     <li>{@link #processArticlesSuccess02} 正常系：openai.api.key が 空文字 の場合。</li>
  * </ul>
  */
 @SpringBootTest
@@ -30,7 +30,7 @@ public class LLMSummarizerImplTest {
     private AppConfig appConfig;
 
     /**
-     * <p>正常系：openai.api.keyが null の場合。</p>
+     * <p>正常系：openai.api.key が null の場合。</p>
      *
      * @throws Exception 例外が発生した場合
      */
@@ -52,7 +52,7 @@ public class LLMSummarizerImplTest {
         ArrayList<Article> articleList = new ArrayList<>();
         articleList.add(article);
 
-        // APIキーをnullに設定
+        // API キーを null に設定
         appConfig.setOpenAIApiKey(null);
 
         //
@@ -78,7 +78,7 @@ public class LLMSummarizerImplTest {
     }
 
     /**
-     * <p>正常系：openai.api.keyが 空文字 の場合。</p>
+     * <p>正常系：openai.api.key が 空文字 の場合。</p>
      *
      * @throws Exception 例外が発生した場合
      */

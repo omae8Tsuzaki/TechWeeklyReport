@@ -331,4 +331,3 @@ tags: weekly-report, tech-news, auto-generated
 - **URL**: [記事を読む](https://www.publickey1.jp/blog/26/googledartflutter_agent_skillsdartflutterai.html)
 - 📰 **AI要約**: Googleが「Dart＆Flutter Agent Skills」をリリースし、DartとFlutterの開発における最新のベストプラクティスをAIエージェントに提供することを発表しました。
 - 💡 **自分のコメント欄**:
-

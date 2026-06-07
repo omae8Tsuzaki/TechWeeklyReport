@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * <p>Markdown生成用ロジックの実装クラス。</p>
+ * <p>Markdown 生成用ロジックの実装クラス。</p>
  */
 @Service
 public class MarkdownGeneratorImpl implements MarkdownGenerator {
@@ -35,7 +35,7 @@ public class MarkdownGeneratorImpl implements MarkdownGenerator {
     // ログ出力の設定
     private static final Logger LOGGER = LoggerFactory.getLogger(MarkdownGeneratorImpl.class);
 
-    // コンストラクタ（Springインジェクションを想定）
+    // コンストラクタ（Spring インジェクションを想定）
     public MarkdownGeneratorImpl() {
     }
 
@@ -69,7 +69,7 @@ public class MarkdownGeneratorImpl implements MarkdownGenerator {
     }
 
     /**
-     * <p>生成された　Markdownファイルの保存。</p>
+     * <p>生成された　Markdown ファイルの保存。</p>
      *
      * @param markdownContent マークダウンファイルに出力するテキスト
      * @param savePath 保存先のパス
@@ -117,10 +117,10 @@ public class MarkdownGeneratorImpl implements MarkdownGenerator {
     }
 
     /**
-     * <p>収集した全記事をまとめて週次レポートのMarkdownテキストを生成します。</p>
+     * <p>収集した全記事をまとめて週次レポートの Markdown テキストを生成します。</p>
      *
      * @param articles 処理済みの記事リスト
-     * @return 生成されたMarkdownコンテンツと保存パスのペア (Map.Entry)
+     * @return 生成された Markdown コンテンツと保存パスのペア (Map.Entry)
      */
     @Override
     public Map.Entry<String, Path> generateWeeklyMarkdown(List<Article> articles) {
@@ -155,10 +155,10 @@ public class MarkdownGeneratorImpl implements MarkdownGenerator {
 
         Path savePath = Paths.get(config.getReportDir(), yearDir, monthDir, filename);
 
-        // Markdownコンテンツ生成
+        // Markdown コンテンツ生成
         StringBuilder markdownContent = new StringBuilder();
 
-        // 1. YAMLフロントマター
+        // 1. YAML フロントマター
         markdownContent.append(String.format("""
                 ---
                 date: %s
@@ -197,7 +197,7 @@ public class MarkdownGeneratorImpl implements MarkdownGenerator {
     }
 
     /**
-     * <p>単一の記事をMarkdown形式でフォーマットします。</p>
+     * <p>単一の記事を Markdown 形式でフォーマットします。</p>
      *
      * @param article 記事データオブジェクト
      * @return Markdown形式の文字列
@@ -205,10 +205,10 @@ public class MarkdownGeneratorImpl implements MarkdownGenerator {
     private String formatArticle(Article article) {
         String category = article.getAiCategory() != null ? article.getAiCategory() : "その他";
 
-        // ArticleのLocalDateTime (UTC相当) をJSTに変換して表示
+        // ArticleのLocalDateTime (UTC相当) を JST に変換して表示
         ZonedDateTime publishedJST = article.getLocalDateTime()
-                .atZone(ZoneOffset.UTC) // UTCとして扱う
-                .withZoneSameInstant(ZoneId.of(ASIA_TOKYO)); // JSTに変換
+                .atZone(ZoneOffset.UTC) // UTC として扱う
+                .withZoneSameInstant(ZoneId.of(ASIA_TOKYO)); // JST に変換
 
         return String.format("""
                 ### 🌐 %s

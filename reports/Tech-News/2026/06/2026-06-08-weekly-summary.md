@@ -353,4 +353,3 @@ tags: weekly-report, tech-news, auto-generated
 - **URL**: [記事を読む](https://www.publickey1.jp/blog/26/7aimicrosoft_ai_models.html)
 - 📰 **AI要約**: マイクロソフトは7つの新しいAIモデル「Microsoft AI Models」を発表し、AI技術の進化を強調しました。
 - 💡 **自分のコメント欄**:
-

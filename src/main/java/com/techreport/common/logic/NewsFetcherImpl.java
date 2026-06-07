@@ -29,33 +29,33 @@ public class NewsFetcherImpl implements NewsFetcher {
     private static final Logger LOGGER = LoggerFactory.getLogger(NewsFetcherImpl.class);
     // アプリケーション設定
     private final AppConfig appConfig;
-    // JSON処理用
+    // JSON 処理用
     private final ObjectMapper objectMapper;
-    // HTTPクライアント
+    // HTTP クライアント
     private final HttpClient httpClient;
 
     /**
      * <p>コンストラクタ。</p>
      *
      * @param appConfig アプリケーション設定
-     * @param objectMapper JSON処理用オブジェクトマッパー
+     * @param objectMapper JSON 処理用オブジェクトマッパー
      */
     public NewsFetcherImpl(AppConfig appConfig, ObjectMapper objectMapper) {
         this.appConfig = appConfig;
         this.objectMapper = objectMapper;
-        // HttpClientはスレッドセーフなので、一度作成して再利用する
+        // HttpClient はスレッドセーフなので、一度作成して再利用する
         this.httpClient = HttpClient.newHttpClient();
     }
 
     /**
-     * <p>feed_list.jsonからフィード情報をロードする。</p>
+     * <p>feed_list.json からフィード情報をロードする。</p>
      *
-     * @param filePath フィードリストJSONファイルのパス
+     * @param filePath フィードリスト JSON ファイルのパス
      * @return フィード情報のリスト
      */
     List<Map<String, String>> loadFeedList(String filePath) {
         try {
-            // クラスパス（GitHub Actions実行環境）またはファイルシステムからロード
+            // クラスパス（GitHub Actions 実行環境）またはファイルシステムからロード
             return objectMapper.readValue(new File(filePath), new TypeReference<>() {});
         } catch (IOException e) {
             LOGGER.error("Error loading feed list from {}: {}", filePath, e.getMessage());
@@ -64,9 +64,9 @@ public class NewsFetcherImpl implements NewsFetcher {
     }
 
     /**
-     * 複数のRSSフィードから過去N日間の記事を取得し、重複を排除して返します。
+     * 複数の RSS フィードから過去N日間の記事を取得し、重複を排除して返します。
      *
-     * @return 過去N日間に公開されたユニークな記事のリスト
+     * @return 過去 N 日間に公開されたユニークな記事のリスト
      */
     @Override
     public List<Article> fetchRecentArticles() {
@@ -86,7 +86,7 @@ public class NewsFetcherImpl implements NewsFetcher {
             String feedName = feedInfo.get("name");
 
             try {
-                // 1. HttpClientを使用してフィードコンテンツを取得
+                // 1. HttpClient を使用してフィードコンテンツを取得
                 HttpRequest request = HttpRequest.newBuilder(URI.create(feedUrl))
                         .header("Accept", "application/xml, application/rss+xml, application/atom+xml")
                         .timeout(java.time.Duration.ofSeconds(10))
@@ -99,7 +99,7 @@ public class NewsFetcherImpl implements NewsFetcher {
                     throw new IOException("Failed to fetch feed. Status code: " + response.statusCode());
                 }
 
-                // 2. 取得した文字列をStringReaderを介してRomeに渡す
+                // 2. 取得した文字列を StringReader を介して Rome に渡す
                 try (StringReader reader = new StringReader(response.body())) {
                     SyndFeed feed = input.build(reader);
                     LOGGER.info("  - Fetched: {}", feedName);
@@ -122,7 +122,7 @@ public class NewsFetcherImpl implements NewsFetcher {
                                 entry.getDescription() != null ? entry.getDescription().getValue() : ""
                         );
 
-                        allArticles.add(article); // HashSetにより重複排除（要Articleのequals/hashCode実装）
+                        allArticles.add(article); // HashSet により重複排除（要 Articleの equals/hashCode 実装）
                     }
                 }
             } catch (IOException | InterruptedException e) {

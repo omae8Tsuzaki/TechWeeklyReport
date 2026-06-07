@@ -14,7 +14,7 @@ public class MainApplication {
      * @param args コマンドライン引数
      */
     public static void main(String[] args) {
-        // Spring Bootアプリケーションを起動
+        // Spring Boot アプリケーションを起動
         SpringApplication.run(MainApplication.class, args);
     }
 

@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class AppConfig {
-    // 環境変数からAPIキーを取得
+    // 環境変数から API キーを取得
     @Value("${techReport.openai.api-key}")
     private String openAIApiKey;
 
@@ -21,7 +21,7 @@ public class AppConfig {
     @Value("${techReport.prompt-template}")
     private String promptTemplate;
 
-    // RSSフィードリストのパス
+    // RSS フィードリストのパス
     @Value("${techReport.feedList.path}")
     private String feedListPath;
 
@@ -33,7 +33,7 @@ public class AppConfig {
     @Value("${techReport.report.dir}")
     private String reportDir;
 
-    // 使用するLLMモデル名(低コスト/高速なモデルを推奨)
+    // 使用する LLM 名(低コスト/高速なモデルを推奨)
     @Value("${techReport.llm.gpt}")
     private String llmGpt;
 
@@ -65,7 +65,7 @@ public class AppConfig {
     }
 
     /**
-     * <p>RSSフィードリストのパスの取得。</p>
+     * <p>RSS フィードリストのパスの取得。</p>
      *
      * @return フィードリストのパス
      */
@@ -92,7 +92,7 @@ public class AppConfig {
     }
 
     /**
-     * <p>使用するLLMモデル名の取得。</p>
+     * <p>使用する LLM 名の取得。</p>
      *
      * @return モデル名
      */
@@ -106,7 +106,7 @@ public class AppConfig {
     }
 
     /**
-     * <p>OpenAI の API Keyの設定。</p>
+     * <p>OpenAI の API Key の設定。</p>
      *
      * @param openAIApiKey API Key
      */
