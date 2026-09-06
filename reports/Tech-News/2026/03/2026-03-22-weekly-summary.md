@@ -1,6 +1,6 @@
 ---
 date: 2026-03-22
-tags: weekly-report, tech-news, auto-generated
+tags: [weekly-report, tech-news, auto-generated]
 ---
 
 # 📅 2026-03-22 週の技術系ニュースまとめ
@@ -405,4 +405,3 @@ tags: weekly-report, tech-news, auto-generated
 - **URL**: [記事を読む](https://zenn.dev/tucker_guitars/articles/bf21b9c0252207)
 - 📰 **AI要約**: Blackwellの128GB VRAMを搭載したマシンで音声認識の性能向上を試みるも、ARM64 Linuxに苦戦した体験談を紹介。
 - 💡 **自分のコメント欄**:
-

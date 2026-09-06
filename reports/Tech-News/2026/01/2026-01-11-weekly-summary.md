@@ -1,6 +1,6 @@
 ---
 date: 2026-01-11
-tags: weekly-report, tech-news, auto-generated
+tags: [weekly-report, tech-news, auto-generated]
 ---
 
 # 📅 2026-01-11 週の技術系ニュースまとめ
@@ -269,4 +269,3 @@ tags: weekly-report, tech-news, auto-generated
 - **URL**: [記事を読む](https://www.publickey1.jp/blog/26/publickeyit2026airust.html)
 - 📰 **AI要約**: 2026年のIT業界予測として、メモリ価格の高騰がクラウド利用に影響を与え、AIエージェントを基にした開発手法やRustの普及が進むと指摘されています。
 - 💡 **自分のコメント欄**:
-

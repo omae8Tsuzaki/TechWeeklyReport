@@ -162,7 +162,7 @@ public class MarkdownGeneratorImpl implements MarkdownGenerator {
         markdownContent.append(String.format("""
                 ---
                 date: %s
-                tags: weekly-report, tech-news, auto-generated
+                tags: [weekly-report, tech-news, auto-generated]
                 ---
                 
                 # 📅 %s 週の技術系ニュースまとめ

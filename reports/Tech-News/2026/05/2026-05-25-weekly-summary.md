@@ -1,6 +1,6 @@
 ---
 date: 2026-05-25
-tags: weekly-report, tech-news, auto-generated
+tags: [weekly-report, tech-news, auto-generated]
 ---
 
 # 📅 2026-05-25 週の技術系ニュースまとめ
@@ -138,7 +138,7 @@ tags: weekly-report, tech-news, auto-generated
 - 📰 **AI要約**: Googleが「Antigravity 2.0」を発表し、ゼロからOSを開発しDoomを実行するデモを行った。効率性と開発能力をアピール。
 - 💡 **自分のコメント欄**:
 
-### 🌐 【技術屋の思考ログ #20】要件定義（前編）：目的と機能要件
+### 🌐 【技術屋の思考ログ#20】要件定義（前編）：目的と機能要件
 
 - **カテゴリ**: `Programming/Frontend`
 - **公開日**: 2026-05-19 18:00 (Zenn (トレンド記事))

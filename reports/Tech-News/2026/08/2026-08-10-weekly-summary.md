@@ -1,6 +1,6 @@
 ---
 date: 2026-08-10
-tags: weekly-report, tech-news, auto-generated
+tags: [weekly-report, tech-news, auto-generated]
 ---
 
 # 📅 2026-08-10 週の技術系ニュースまとめ
@@ -327,4 +327,3 @@ tags: weekly-report, tech-news, auto-generated
 - **URL**: [記事を読む](https://zenn.dev/canly/articles/e167546ccb6201)
 - 📰 **AI要約**: Claude Code Skillsの577個のスキルを分析し、6,803回の実績から定着するスキルの共通点を明らかにしました。
 - 💡 **自分のコメント欄**:
-

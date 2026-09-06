@@ -1,6 +1,6 @@
 ---
 date: 2026-05-11
-tags: weekly-report, tech-news, auto-generated
+tags: [weekly-report, tech-news, auto-generated]
 ---
 
 # 📅 2026-05-11 週の技術系ニュースまとめ
@@ -242,7 +242,7 @@ tags: weekly-report, tech-news, auto-generated
 - 📰 **AI要約**: Macソフトウェアの配布が困難で、ストレスを感じると述べています。配布プロセスの複雑さが影響している模様です。
 - 💡 **自分のコメント欄**:
 
-### 🌐 【技術屋の思考ログ #18】Agentic Commerce（前編）：決済システムの変遷
+### 🌐 【技術屋の思考ログ#18】Agentic Commerce（前編）：決済システムの変遷
 
 - **カテゴリ**: `Business/Policy`
 - **公開日**: 2026-05-05 18:00 (Zenn (トレンド記事))
@@ -325,4 +325,3 @@ tags: weekly-report, tech-news, auto-generated
 - **URL**: [記事を読む](https://zenn.dev/lappy/articles/8fa754cdf9af6c)
 - 📰 **AI要約**: Hamel Husainが提唱するLLM-as-a-Judgeの開発に向けた5つのエラー分析手順を解説。これにより、モデルの判断力向上を目指す。
 - 💡 **自分のコメント欄**:
-

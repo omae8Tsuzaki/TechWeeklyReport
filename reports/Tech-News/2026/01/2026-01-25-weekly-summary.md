@@ -1,6 +1,6 @@
 ---
 date: 2026-01-25
-tags: weekly-report, tech-news, auto-generated
+tags: [weekly-report, tech-news, auto-generated]
 ---
 
 # 📅 2026-01-25 週の技術系ニュースまとめ
@@ -268,7 +268,7 @@ tags: weekly-report, tech-news, auto-generated
 - 📰 **AI要約**: AI開発において知識の定着が難しい理由と、それに対抗するための戦略について考察した記事。
 - 💡 **自分のコメント欄**:
 
-### 🌐 【技術屋の思考ログ #2】2025年のAI状況：エンジニアの生存戦略
+### 🌐 【技術屋の思考ログ#2】2025年のAI状況：エンジニアの生存戦略
 
 - **カテゴリ**: `AI/ML`
 - **公開日**: 2026-01-20 21:05 (Zenn (トレンド記事))
@@ -299,4 +299,3 @@ tags: weekly-report, tech-news, auto-generated
 - **URL**: [記事を読む](https://www.publickey1.jp/blog/26/vs_codeaiagent_skillsvs_code_december_2025_version_1108.html)
 - 📰 **AI要約**: VS Codeの新バージョン1.108がリリースされ、AIにタスクの手順や知識を組み込む「Agent Skills」が実験的に対応しました。
 - 💡 **自分のコメント欄**:
-

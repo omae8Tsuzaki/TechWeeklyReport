@@ -1,6 +1,6 @@
 ---
 date: 2025-12-14
-tags: weekly-report, tech-news, auto-generated
+tags: [weekly-report, tech-news, auto-generated]
 ---
 
 # 📅 2025-12-14 週の技術系ニュースまとめ
@@ -439,4 +439,3 @@ tags: weekly-report, tech-news, auto-generated
 - **URL**: [記事を読む](https://www.publickey1.jp/blog/25/aiacpagent_client_protocoljetbrainszeddocker.html)
 - 📰 **AI要約**: JetBrainsは、全てのコードエディタでAIエージェントを利用できる「Agent Client Protocol（ACP）」のベータ版を提供開始しました。このプロトコルにより、開発者はAIの力を活用しやすくなります。
 - 💡 **自分のコメント欄**:
-

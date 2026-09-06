@@ -1,6 +1,6 @@
 ---
 date: 2026-07-13
-tags: weekly-report, tech-news, auto-generated
+tags: [weekly-report, tech-news, auto-generated]
 ---
 
 # 📅 2026-07-13 週の技術系ニュースまとめ
@@ -301,4 +301,3 @@ tags: weekly-report, tech-news, auto-generated
 - **URL**: [記事を読む](https://www.math.ucdavis.edu/~saito/courses/229A/stewart-svd.pdf)
 - 📰 **AI要約**: 特異値分解(SVD)の初期の歴史に関する記事で、1993年に発表された文献に基づく内容です。SVDの基本概念や重要性が解説されています。
 - 💡 **自分のコメント欄**:
-

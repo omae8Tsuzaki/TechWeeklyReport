@@ -1,6 +1,6 @@
 ---
 date: 2026-02-08
-tags: weekly-report, tech-news, auto-generated
+tags: [weekly-report, tech-news, auto-generated]
 ---
 
 # 📅 2026-02-08 週の技術系ニュースまとめ
@@ -307,4 +307,3 @@ tags: weekly-report, tech-news, auto-generated
 - **URL**: [記事を読む](https://www.publickey1.jp/blog/26/bigqueryconversational_analytics.html)
 - 📰 **AI要約**: BigQueryに新しい会話型分析機能が追加され、詳細な分析レポート生成や将来予測、非構造化データの分析が可能になりました。
 - 💡 **自分のコメント欄**:
-

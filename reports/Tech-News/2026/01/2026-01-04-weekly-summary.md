@@ -1,6 +1,6 @@
 ---
 date: 2026-01-04
-tags: weekly-report, tech-news, auto-generated
+tags: [weekly-report, tech-news, auto-generated]
 ---
 
 # 📅 2026-01-04 週の技術系ニュースまとめ

@@ -1,6 +1,6 @@
 ---
 date: 2026-04-20
-tags: weekly-report, tech-news, auto-generated
+tags: [weekly-report, tech-news, auto-generated]
 ---
 
 # 📅 2026-04-20 週の技術系ニュースまとめ
@@ -116,7 +116,7 @@ tags: weekly-report, tech-news, auto-generated
 - 📰 **AI要約**: 『c-daily』では、Coding Agentの履歴確認機能を簡易化し、開発の効率性向上を目指しています。この新機能により、ユーザーは過去のコード変更を簡単に追跡可能になります。
 - 💡 **自分のコメント欄**:
 
-### 🌐 【技術屋の思考ログ #15】 システムテスト（前編）：機能要件に対するテスト
+### 🌐 【技術屋の思考ログ#15】 システムテスト（前編）：機能要件に対するテスト
 
 - **カテゴリ**: `Programming/Frontend`
 - **公開日**: 2026-04-14 18:00 (Zenn (トレンド記事))
@@ -359,4 +359,3 @@ tags: weekly-report, tech-news, auto-generated
 - **URL**: [記事を読む](https://zenn.dev/mhlab/articles/7d9f979fd214e5)
 - 📰 **AI要約**: センサ異常検出の実装例に関する記事では、異常検出技術を用いてセンサデータの異常を特定する方法を紹介しています。
 - 💡 **自分のコメント欄**:
-

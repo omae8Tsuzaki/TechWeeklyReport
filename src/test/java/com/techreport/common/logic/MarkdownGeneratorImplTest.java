@@ -154,7 +154,7 @@ public class MarkdownGeneratorImplTest {
                 """
                         ---
                         date: 2024-06-01
-                        tags: weekly-report, tech-news, auto-generated
+                        tags: [weekly-report, tech-news, auto-generated]
                         ---
                         
                         # 📅 2024-06-01 週の技術系ニュースまとめ

@@ -1,6 +1,6 @@
 ---
 date: 2025-11-30
-tags: weekly-report, tech-news, auto-generated
+tags: [weekly-report, tech-news, auto-generated]
 ---
 
 # 📅 2025-11-30 週の技術系ニュースまとめ

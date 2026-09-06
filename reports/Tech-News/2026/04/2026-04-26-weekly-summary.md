@@ -1,6 +1,6 @@
 ---
 date: 2026-04-26
-tags: weekly-report, tech-news, auto-generated
+tags: [weekly-report, tech-news, auto-generated]
 ---
 
 # 📅 2026-04-26 週の技術系ニュースまとめ
@@ -311,4 +311,3 @@ tags: weekly-report, tech-news, auto-generated
 - **URL**: [記事を読む](https://www.publickey1.jp/blog/26/cloudflareaicloudflare_email_service.html)
 - 📰 **AI要約**: CloudflareはAIエージェントを利用したメール送受信サービス「Cloudflare Email Service」のパブリックベータを開始しました。
 - 💡 **自分のコメント欄**:
-

@@ -1,6 +1,6 @@
 ---
 date: 2026-04-13
-tags: weekly-report, tech-news, auto-generated
+tags: [weekly-report, tech-news, auto-generated]
 ---
 
 # 📅 2026-04-13 週の技術系ニュースまとめ
@@ -156,7 +156,7 @@ tags: weekly-report, tech-news, auto-generated
 - 📰 **AI要約**: ソフトデリートでのdeleted_atをUNIQUEキーに含めると、論理的に削除されたレコードの重複が許可されず、データ管理に問題が生じる。この設計上のリスクを解説。
 - 💡 **自分のコメント欄**:
 
-### 🌐 【技術屋の思考ログ #14】 基本設計（後編）：設計は「少人数」が鉄則
+### 🌐 【技術屋の思考ログ#14】 基本設計（後編）：設計は「少人数」が鉄則
 
 - **カテゴリ**: `Programming/Frontend`
 - **公開日**: 2026-04-07 18:00 (Zenn (トレンド記事))
@@ -381,4 +381,3 @@ tags: weekly-report, tech-news, auto-generated
 - **URL**: [記事を読む](https://zenn.dev/ktg/articles/a2c25574b43df1)
 - 📰 **AI要約**: AIの進化によりプログラマーの役割が変化しつつあり、新たなスキルが求められるようになっている。従来のプログラミングからの脱却が必要とされる可能性がある。
 - 💡 **自分のコメント欄**:
-

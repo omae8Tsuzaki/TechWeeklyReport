@@ -1,6 +1,6 @@
 ---
 date: 2026-08-16
-tags: weekly-report, tech-news, auto-generated
+tags: [weekly-report, tech-news, auto-generated]
 ---
 
 # 📅 2026-08-16 週の技術系ニュースまとめ
@@ -325,4 +325,3 @@ tags: weekly-report, tech-news, auto-generated
 - **URL**: [記事を読む](https://www.publickey1.jp/blog/26/content_4.html)
 - 📰 **AI要約**: 2026年版の無料で読めるITまんがが紹介されており、AIの仕組みやDC業務に関する内容を含む。
 - 💡 **自分のコメント欄**:
-

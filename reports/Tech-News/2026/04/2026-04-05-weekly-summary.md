@@ -1,6 +1,6 @@
 ---
 date: 2026-04-05
-tags: weekly-report, tech-news, auto-generated
+tags: [weekly-report, tech-news, auto-generated]
 ---
 
 # 📅 2026-04-05 週の技術系ニュースまとめ
@@ -114,7 +114,7 @@ tags: weekly-report, tech-news, auto-generated
 - 📰 **AI要約**: コンポーネント分割の最適な範囲について議論し、過剰分割の弊害や最適化のポイントを解説しています。
 - 💡 **自分のコメント欄**:
 
-### 🌐 【技術屋の思考ログ #13】 基本設計（前編）：基本設計書って、どこまで書くの？
+### 🌐 【技術屋の思考ログ#13】 基本設計（前編）：基本設計書って、どこまで書くの？
 
 - **カテゴリ**: `Programming/Frontend`
 - **公開日**: 2026-03-31 18:00 (Zenn (トレンド記事))
@@ -395,4 +395,3 @@ tags: weekly-report, tech-news, auto-generated
 - **URL**: [記事を読む](https://zenn.dev/xiaosen/articles/ai-engineer-concepts-guide)
 - 📰 **AI要約**: AIエンジニアにとって重要な30の核心概念を紹介し、技術習得の指針を提供します。
 - 💡 **自分のコメント欄**:
-

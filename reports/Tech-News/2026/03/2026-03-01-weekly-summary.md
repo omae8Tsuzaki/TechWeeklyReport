@@ -1,6 +1,6 @@
 ---
 date: 2026-03-01
-tags: weekly-report, tech-news, auto-generated
+tags: [weekly-report, tech-news, auto-generated]
 ---
 
 # 📅 2026-03-01 週の技術系ニュースまとめ
@@ -122,7 +122,7 @@ tags: weekly-report, tech-news, auto-generated
 - 📰 **AI要約**: JetBrainsがVS Code用の「Java to Kotlinコンバータ」をリリース。これにより、Javaコードを簡単にKotlinに変換できるようになり、開発者にとって利便性が向上する。
 - 💡 **自分のコメント欄**:
 
-### 🌐 【技術屋の思考ログ #7】 AI時代の「プログラミング基礎」
+### 🌐 【技術屋の思考ログ#7】 AI時代の「プログラミング基礎」
 
 - **カテゴリ**: `Programming/Frontend`
 - **公開日**: 2026-02-24 22:00 (Zenn (トレンド記事))
@@ -293,4 +293,3 @@ tags: weekly-report, tech-news, auto-generated
 - **URL**: [記事を読む](https://www.publickey1.jp/blog/26/nistaiai_agent_standards_initiative.html)
 - 📰 **AI要約**: NISTがAIエージェントの技術標準「AI Agent Standards Initiative」を発表し、相互運用性と安全性の確保を目指す取り組みを開始した。
 - 💡 **自分のコメント欄**:
-

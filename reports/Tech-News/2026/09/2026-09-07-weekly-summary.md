@@ -1,6 +1,6 @@
 ---
 date: 2026-09-07
-tags: weekly-report, tech-news, auto-generated
+tags: [weekly-report, tech-news, auto-generated]
 ---
 
 # 📅 2026-09-07 週の技術系ニュースまとめ
@@ -375,4 +375,3 @@ tags: weekly-report, tech-news, auto-generated
 - **URL**: [記事を読む](https://zenn.dev/dmmdata/articles/pair-switching-rerandomization)
 - 📰 **AI要約**: Pair-Switching Rerandomizationは、データの公平性を高めるための新しいアルゴリズムで、特に機械学習の分野において重要な役割を果たす可能性があります。
 - 💡 **自分のコメント欄**:
-

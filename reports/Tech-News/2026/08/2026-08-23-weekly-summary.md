@@ -1,6 +1,6 @@
 ---
 date: 2026-08-23
-tags: weekly-report, tech-news, auto-generated
+tags: [weekly-report, tech-news, auto-generated]
 ---
 
 # 📅 2026-08-23 週の技術系ニュースまとめ
@@ -355,4 +355,3 @@ tags: weekly-report, tech-news, auto-generated
 - **URL**: [記事を読む](https://www.publickey1.jp/blog/26/aikitesurfcloudflare.html)
 - 📰 **AI要約**: CloudflareがAI専用の超軽量ヘッドレスブラウザ「Kitesurf」を発表。タブやテーマ、拡張機能がなく、高速かつシンプルな設計が特徴。
 - 💡 **自分のコメント欄**:
-

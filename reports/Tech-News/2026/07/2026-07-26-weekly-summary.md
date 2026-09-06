@@ -1,6 +1,6 @@
 ---
 date: 2026-07-26
-tags: weekly-report, tech-news, auto-generated
+tags: [weekly-report, tech-news, auto-generated]
 ---
 
 # 📅 2026-07-26 週の技術系ニュースまとめ
@@ -323,4 +323,3 @@ tags: weekly-report, tech-news, auto-generated
 - **URL**: [記事を読む](https://www.publickey1.jp/blog/26/aianthropicmicrosoft_365okta.html)
 - 📰 **AI要約**: Oktaの調査によると、企業向けAIツールの成長率が最も高いのはAnthropicで、アカウント数はMicrosoft 365が最多であることが明らかになった。
 - 💡 **自分のコメント欄**:
-

@@ -1,6 +1,6 @@
 ---
 date: 2026-05-18
-tags: weekly-report, tech-news, auto-generated
+tags: [weekly-report, tech-news, auto-generated]
 ---
 
 # 📅 2026-05-18 週の技術系ニュースまとめ
@@ -423,4 +423,3 @@ tags: weekly-report, tech-news, auto-generated
 - **URL**: [記事を読む](https://www.publickey1.jp/blog/26/anthropicawsclaude_platform_on_awsclaudeaws.html)
 - 📰 **AI要約**: AnthropicがAWS上で「Claude Platform on AWS」を正式リリースし、新機能を含むフルセットを提供開始しました。
 - 💡 **自分のコメント欄**:
-

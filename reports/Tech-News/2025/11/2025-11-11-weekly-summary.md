@@ -1,6 +1,6 @@
 ---
 date: 2025-11-11
-tags: weekly-report, tech-news, auto-generated
+tags: [weekly-report, tech-news, auto-generated]
 ---
 
 # 📅 2025-11-11 週の技術系ニュースまとめ
@@ -135,20 +135,20 @@ tags: weekly-report, tech-news, auto-generated
 - 📰 **AI要約**: Alternative Architecture DOJOの入社エントリでは、自己紹介の重要性とその方法について解説されています。
 - 💡 **自分のコメント欄**:
 
-### 🌐 技術書典19で「Money Forward TechBook #11, #12」を頒布します！ | Money Forward Developers Blog
+### 🌐 技術書典19で「Money Forward TechBook#11,#12」を頒布します！ | Money Forward Developers Blog
 
 - **カテゴリ**: `その他`
 - **公開日**: 2025-11-07 09:00 (企業テックブログ)
 - **URL**: [記事を読む](https://moneyforward-dev.jp/entry/2025/11/07/0900000)
-- 📰 **AI要約**: 技術書典19で「Money Forward TechBook #11, #12」を頒布するというお知らせです。参加者は新しい技術情報を入手できます。
+- 📰 **AI要約**: 技術書典19で「Money Forward TechBook#11,#12」を頒布するというお知らせです。参加者は新しい技術情報を入手できます。
 - 💡 **自分のコメント欄**:
 
-### 🌐 GENDA Tech Talk #2 開催レポート
+### 🌐 GENDA Tech Talk#2 開催レポート
 
 - **カテゴリ**: `その他`
 - **公開日**: 2025-11-07 08:29 (Zenn (トレンド記事))
 - **URL**: [記事を読む](https://zenn.dev/genda_jp/articles/2e46a1a47df865)
-- 📰 **AI要約**: GENDAが主催するTech Talk #2が開催され、最新技術や業界動向について多くの専門家が議論しました。参加者は情報交換を通じて新たな知見を得ました。
+- 📰 **AI要約**: GENDAが主催するTech Talk#2が開催され、最新技術や業界動向について多くの専門家が議論しました。参加者は情報交換を通じて新たな知見を得ました。
 - 💡 **自分のコメント欄**:
 
 ### 🌐 「Cybozu Tech Meetup#23 EMが直面する課題を赤裸々に語り合う会」を開催しました！ | Cybozu Inside Out | サイボウズエンジニアのブログ

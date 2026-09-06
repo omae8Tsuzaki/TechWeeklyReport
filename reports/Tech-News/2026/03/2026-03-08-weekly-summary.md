@@ -1,6 +1,6 @@
 ---
 date: 2026-03-08
-tags: weekly-report, tech-news, auto-generated
+tags: [weekly-report, tech-news, auto-generated]
 ---
 
 # 📅 2026-03-08 週の技術系ニュースまとめ
@@ -122,7 +122,7 @@ tags: weekly-report, tech-news, auto-generated
 - 📰 **AI要約**: 主要なブラウザエンジンで、Service Workerを利用する際にJavaScriptモジュール機能が対応可能となり、開発者に新たな利便性が提供される。
 - 💡 **自分のコメント欄**:
 
-### 🌐 【技術屋の思考ログ #8】単体テストのいろは
+### 🌐 【技術屋の思考ログ#8】単体テストのいろは
 
 - **カテゴリ**: `Programming/Frontend`
 - **公開日**: 2026-03-03 18:00 (Zenn (トレンド記事))
@@ -339,4 +339,3 @@ tags: weekly-report, tech-news, auto-generated
 - **URL**: [記事を読む](https://www.publickey1.jp/blog/26/amazon_bedrockopenai_apiopenai_sdk.html)
 - 📰 **AI要約**: Amazon BedrockがOpenAI API互換のProjects APIを提供開始。これにより、オープンウェイトな基盤モデルでOpenAI SDKが利用できるようになった。
 - 💡 **自分のコメント欄**:
-

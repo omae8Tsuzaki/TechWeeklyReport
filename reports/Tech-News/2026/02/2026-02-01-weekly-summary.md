@@ -1,6 +1,6 @@
 ---
 date: 2026-02-01
-tags: weekly-report, tech-news, auto-generated
+tags: [weekly-report, tech-news, auto-generated]
 ---
 
 # 📅 2026-02-01 週の技術系ニュースまとめ
@@ -106,7 +106,7 @@ tags: weekly-report, tech-news, auto-generated
 - 📰 **AI要約**: AppleがSwift言語を用いたWindowsアプリ開発を支援する「Windows Workgroup」を新設したことを発表。これにより、Swiftを利用したクロスプラットフォーム開発が促進される。
 - 💡 **自分のコメント欄**:
 
-### 🌐 【技術屋の思考ログ #3】 Vibeコーディングによる「開発プロセス」の変化
+### 🌐 【技術屋の思考ログ#3】 Vibeコーディングによる「開発プロセス」の変化
 
 - **カテゴリ**: `Programming/Frontend`
 - **公開日**: 2026-01-27 18:00 (Zenn (トレンド記事))
@@ -333,4 +333,3 @@ tags: weekly-report, tech-news, auto-generated
 - **URL**: [記事を読む](https://www.publickey1.jp/blog/26/aipostgresqlagent_skillpostgres_best_practicessupabase.html)
 - 📰 **AI要約**: Supabaseは、AIエージェントがPostgreSQLに対応した優れたコードを書くためのAgent Skill「Postgres Best Practices」を公開しました。
 - 💡 **自分のコメント欄**:
-

@@ -1,6 +1,6 @@
 ---
 date: 2026-03-29
-tags: weekly-report, tech-news, auto-generated
+tags: [weekly-report, tech-news, auto-generated]
 ---
 
 # 📅 2026-03-29 週の技術系ニュースまとめ
@@ -381,4 +381,3 @@ tags: weekly-report, tech-news, auto-generated
 - **URL**: [記事を読む](https://zenn.dev/xiaosen/articles/ai-coding-steam-engine-on-cart)
 - 📰 **AI要約**: AIによるコーディングの現状は、まだ発展途上にあり、蒸気機関が馬車を引くような状況であることが示されている。
 - 💡 **自分のコメント欄**:
-

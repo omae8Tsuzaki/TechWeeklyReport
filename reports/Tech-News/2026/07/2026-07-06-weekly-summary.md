@@ -1,6 +1,6 @@
 ---
 date: 2026-07-06
-tags: weekly-report, tech-news, auto-generated
+tags: [weekly-report, tech-news, auto-generated]
 ---
 
 # 📅 2026-07-06 週の技術系ニュースまとめ
@@ -327,4 +327,3 @@ tags: weekly-report, tech-news, auto-generated
 - **URL**: [記事を読む](https://www.publickey1.jp/blog/26/pythonmojomodularai.html)
 - 📰 **AI要約**: クアルコムがPythonに似た新言語「Mojo」を開発したModular社を買収し、AIデータセンター市場に本格参入することを発表しました。
 - 💡 **自分のコメント欄**:
-

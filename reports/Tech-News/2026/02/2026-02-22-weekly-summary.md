@@ -1,6 +1,6 @@
 ---
 date: 2026-02-22
-tags: weekly-report, tech-news, auto-generated
+tags: [weekly-report, tech-news, auto-generated]
 ---
 
 # 📅 2026-02-22 週の技術系ニュースまとめ
@@ -373,4 +373,3 @@ tags: weekly-report, tech-news, auto-generated
 - **URL**: [記事を読む](https://zenn.dev/omatsuman/articles/ai-perspective-2026)
 - 📰 **AI要約**: 2026年にはAI技術が進化し、共生から融合へと進む新しい地平が開かれることが期待されている。これにより、日常生活や産業における変化が伴う。
 - 💡 **自分のコメント欄**:
-

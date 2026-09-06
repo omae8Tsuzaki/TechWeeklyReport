@@ -1,6 +1,6 @@
 ---
 date: 2026-02-16
-tags: weekly-report, tech-news, auto-generated
+tags: [weekly-report, tech-news, auto-generated]
 ---
 
 # 📅 2026-02-16 週の技術系ニュースまとめ
@@ -24,7 +24,7 @@ tags: weekly-report, tech-news, auto-generated
 
 ## 🚀 ビジネス/政策
 
-### 🌐 【技術屋の思考ログ #5】 確定申告で悟った、ファクトチェックの重要性
+### 🌐 【技術屋の思考ログ#5】 確定申告で悟った、ファクトチェックの重要性
 
 - **カテゴリ**: `ビジネス/政策`
 - **公開日**: 2026-02-10 18:00 (Zenn (トレンド記事))
@@ -393,4 +393,3 @@ tags: weekly-report, tech-news, auto-generated
 - **URL**: [記事を読む](https://zenn.dev/omu_tryangle/articles/dc9f3661583e14)
 - 📰 **AI要約**: Waifu2x-Extension-GUIの効率的な処理手順について解説する記事です。画像の解像度向上やノイズ除去に関する具体的な方法が紹介されています。
 - 💡 **自分のコメント欄**:
-

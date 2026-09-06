@@ -1,6 +1,6 @@
 ---
 date: 2026-08-02
-tags: weekly-report, tech-news, auto-generated
+tags: [weekly-report, tech-news, auto-generated]
 ---
 
 # 📅 2026-08-02 週の技術系ニュースまとめ
@@ -355,4 +355,3 @@ tags: weekly-report, tech-news, auto-generated
 - **URL**: [記事を読む](https://zenn.dev/ququla89/articles/cross-domain-ai-knowledge-synthesis-architecture)
 - 📰 **AI要約**: 法学、聖書神学、哲学の異分野データベースをAIが横断検索し、三者比較を可能にするナレッジ統合設計が発表された。
 - 💡 **自分のコメント欄**:
-

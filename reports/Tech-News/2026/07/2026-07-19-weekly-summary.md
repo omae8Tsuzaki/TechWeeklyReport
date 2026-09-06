@@ -1,6 +1,6 @@
 ---
 date: 2026-07-19
-tags: weekly-report, tech-news, auto-generated
+tags: [weekly-report, tech-news, auto-generated]
 ---
 
 # 📅 2026-07-19 週の技術系ニュースまとめ
@@ -347,4 +347,3 @@ tags: weekly-report, tech-news, auto-generated
 - **URL**: [記事を読む](https://www.publickey1.jp/blog/26/3ai.html)
 - 📰 **AI要約**: さくらのクラウドが、デジタル庁のガバメントAI「源内」に対して、国内開発の3つの大規模言語モデルの試用を開始した。
 - 💡 **自分のコメント欄**:
-

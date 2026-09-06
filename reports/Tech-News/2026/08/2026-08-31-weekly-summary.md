@@ -1,6 +1,6 @@
 ---
 date: 2026-08-31
-tags: weekly-report, tech-news, auto-generated
+tags: [weekly-report, tech-news, auto-generated]
 ---
 
 # 📅 2026-08-31 週の技術系ニュースまとめ
@@ -301,4 +301,3 @@ tags: weekly-report, tech-news, auto-generated
 - **URL**: [記事を読む](https://zenn.dev/finatext/articles/d35d42cf87ecc9)
 - 📰 **AI要約**: Ai4カンファレンスに参加し、最新のAI技術やビジネス応用について学びました。業界の専門家との交流もあり、多くの刺激を受けました。
 - 💡 **自分のコメント欄**:
-
