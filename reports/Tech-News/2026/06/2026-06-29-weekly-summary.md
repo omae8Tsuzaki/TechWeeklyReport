@@ -1,6 +1,6 @@
 ---
 date: 2026-06-29
-tags: weekly-report, tech-news, auto-generated
+tags: [weekly-report, tech-news, auto-generated]
 ---
 
 # 📅 2026-06-29 週の技術系ニュースまとめ

@@ -1,6 +1,6 @@
 ---
 date: 2026-06-01
-tags: weekly-report, tech-news, auto-generated
+tags: [weekly-report, tech-news, auto-generated]
 ---
 
 # 📅 2026-06-01 週の技術系ニュースまとめ
@@ -146,7 +146,7 @@ tags: weekly-report, tech-news, auto-generated
 - 📰 **AI要約**: .NET MAUIがXamarinからMonoランタイムを脱却し、CoreCLRへ移行しました。これにより性能が向上し、より現代的な開発環境が実現されます。
 - 💡 **自分のコメント欄**:
 
-### 🌐 【技術屋の思考ログ #21】要件定義（後編）：データモデルと非機能要件
+### 🌐 【技術屋の思考ログ#21】要件定義（後編）：データモデルと非機能要件
 
 - **カテゴリ**: `Programming/Frontend`
 - **公開日**: 2026-05-26 18:00 (Zenn (トレンド記事))
