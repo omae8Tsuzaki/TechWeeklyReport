@@ -54,12 +54,12 @@ tags: [weekly-report, tech-news, auto-generated]
 - 📰 **AI要約**: Bluetoothの名称は、デンマークの王ハーラル・ブロタンドがブルーベリーを好んで食べた話に由来している。この歴史的背景は、通信技術における継承と統合を象徴している。
 - 💡 **自分のコメント欄**:
 
-### 🌐 GENDA Tech Talk #3 開催レポート
+### 🌐 GENDA Tech Talk#3 開催レポート
 
 - **カテゴリ**: `その他`
 - **公開日**: 2026-02-17 10:58 (Zenn (トレンド記事))
 - **URL**: [記事を読む](https://zenn.dev/genda_jp/articles/eb3b8bdd9f8ed5)
-- 📰 **AI要約**: GENDA Tech Talk #3が開催され、最新の技術動向と取り組みが共有された。参加者は技術交流を深め、実践的な知見を得る機会となった。
+- 📰 **AI要約**: GENDA Tech Talk#3が開催され、最新の技術動向と取り組みが共有された。参加者は技術交流を深め、実践的な知見を得る機会となった。
 - 💡 **自分のコメント欄**:
 
 ## 🚀 Security
@@ -350,7 +350,7 @@ tags: [weekly-report, tech-news, auto-generated]
 - 📰 **AI要約**: Agent Teamsのアーキテクチャを解説し、5つのエージェントが並列に運用される実践的なアプローチについて詳述します。
 - 💡 **自分のコメント欄**:
 
-### 🌐 【技術屋の思考ログ #6】Agentic AI Hackathon体験記。
+### 🌐 【技術屋の思考ログ#6】Agentic AI Hackathon体験記。
 
 - **カテゴリ**: `AI/ML`
 - **公開日**: 2026-02-17 22:02 (Zenn (トレンド記事))

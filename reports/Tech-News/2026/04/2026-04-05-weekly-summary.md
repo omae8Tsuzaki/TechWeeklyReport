@@ -98,7 +98,7 @@ tags: [weekly-report, tech-news, auto-generated]
 - 📰 **AI要約**: Storybook MCP for ReactとCompositionを活用し、共通コンポーネントにモックを寄せる実装方法を解説。統一感を持つUI開発が可能に。
 - 💡 **自分のコメント欄**:
 
-### 🌐 【リートコード学習】ゼロからヒーローへ #0：導入
+### 🌐 【リートコード学習】ゼロからヒーローへ#0：導入
 
 - **カテゴリ**: `Programming/Frontend`
 - **公開日**: 2026-04-03 10:03 (Zenn (トレンド記事))

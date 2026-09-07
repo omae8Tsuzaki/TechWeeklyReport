@@ -300,7 +300,7 @@ tags: [weekly-report, tech-news, auto-generated]
 - 📰 **AI要約**: Kyberが創業マーケターを募集。新しいチームメンバーはスタートアップの成長を促進する重要な役割を担う。
 - 💡 **自分のコメント欄**:
 
-### 🌐 【技術屋の思考ログ #19】Agentic Commerce（後編）：決済システムの未来
+### 🌐 【技術屋の思考ログ#19】Agentic Commerce（後編）：決済システムの未来
 
 - **カテゴリ**: `Business/Policy`
 - **公開日**: 2026-05-12 18:00 (Zenn (トレンド記事))
